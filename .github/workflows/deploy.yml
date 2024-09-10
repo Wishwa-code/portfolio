@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Replace 'main' with your default branch if different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Specify the Node.js version used in your project
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the project
+      - name: Build project
+        run: npm run build
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
