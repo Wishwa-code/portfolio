@@ -113,7 +113,7 @@
   display: flex;
   height: 1500px; 
   width: 100vw;
-  background-color: rgb(0, 255, 64);
+  background-color: rgb(255, 0, 0);
   flex-direction: column;
 }
 
