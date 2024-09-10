@@ -25,9 +25,13 @@ jobs:
         run: npm run build  
 
       - name: Configure Git user  
-        run: | 
+        run: |   
           git config --global user.name "Wishwa-code"  
           git config --global user.email "vishva.2017087@iit.ac.lk"  
+
+      - name: Set up GitHub Pages remote  
+        run: |  
+          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repo }}.git  
 
       - name: Deploy to GitHub Pages  
         run: npx gh-pages -d build  
