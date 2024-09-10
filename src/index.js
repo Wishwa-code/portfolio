@@ -4,6 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if (window.scrollY > lastScrollY) {
+    // Scrolling down
+    header.classList.add('hidden');
+  } else {
+    // Scrolling up
+    header.classList.remove('hidden');
+  }
+  lastScrollY = window.scrollY;
+});
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
