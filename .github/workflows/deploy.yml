@@ -28,11 +28,7 @@ jobs:
       - name: Build project  
         run: npm run build  
 
-      # Step 5: Install gh-pages  
-      - name: Install gh-pages  
-        run: npm install --save-dev gh-pages  
-
-      # Step 6: Deploy to GitHub Pages  
+      # Step 5: Deploy to GitHub Pages  
       - name: Deploy to GitHub Pages  
         run: npx gh-pages -d build  
         env:  
