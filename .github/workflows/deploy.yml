@@ -3,32 +3,32 @@ name: Deploy to GitHub Pages
 on:  
   push:  
     branches:  
-      - main  # Replace 'main' with your default branch if different  
+      - main  # Change this to your branch name if necessary  
 
 jobs:  
   deploy:  
     runs-on: ubuntu-latest  
-
+    
     steps:  
-      # Step 1: Checkout the repository  
       - name: Checkout code  
-        uses: actions/checkout@v3  
+        uses: actions/checkout@v2  
 
-      # Step 2: Set up Node.js  
       - name: Set up Node.js  
-        uses: actions/setup-node@v3  
+        uses: actions/setup-node@v2  
         with:  
-          node-version: '16'  # Specify the Node.js version used in your project  
+          node-version: '14' # Specify your Node.js version  
 
-      # Step 3: Install dependencies  
       - name: Install dependencies  
         run: npm install  
 
-      # Step 4: Build the project  
-      - name: Build project  
+      - name: Build the project  
         run: npm run build  
 
-      # Step 5: Deploy to GitHub Pages  
+      - name: Configure Git user  
+        run: | 
+          git config --global user.name "Wishwa-code"  
+          git config --global user.email "vishva.2017087@iit.ac.lk"  
+
       - name: Deploy to GitHub Pages  
         run: npx gh-pages -d build  
         env:  
