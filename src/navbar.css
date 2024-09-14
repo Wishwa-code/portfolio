@@ -1,0 +1,92 @@
+#header {
+  position: fixed;         /* Make it sticky */
+  top: 0;                  /* Stick it to the top */
+  left: 0;
+  width: 98vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  transition: top 0.3s;     /* Smooth transition */
+  z-index: 1000; 
+  height:15vh;
+  background-color: #0b0c10;
+  padding-bottom:20px;
+}
+
+/* Hide the header initially (when scrolling down) */
+#header.hidden {
+  top: -120px;              /* Move it off the screen when hidden */
+}
+
+/* Style for the left side (logo) */
+#left-side-nav p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+#left-side-nav {
+    dispaly:flex;
+    flex-direction: row;
+    width:300px;
+    padding-left: 10px;
+    height:100%;
+    /*background-color: burlywood;*/
+}
+#right-side-nav{
+    display:flex;
+    padding-right:50px;
+    flex-direction: row;
+    padding-top: 20px;
+  
+}
+
+.inner-tab{
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100px;
+}
+
+.inner-tab-no{
+    padding-right: 2px;
+    color:#ffe400;
+    font-family:  Inconsolata, monospace;
+    letter-spacing: .25px;
+    margin-right: auto;
+    padding: 5px 0px 5px 5px;
+}
+
+.inner-tab-text {
+    letter-spacing: .25px;
+    margin-right: auto;
+    padding: 5px 10px 5px 5px;
+    font-family: Inconsolata, monospace;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none;
+    padding-left: 0;
+}
+
+/* Style for the right side (navigation links) */
+
+
+@media (max-width: 768px) {
+  #right-side-nav{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #right-side-nav ul {
+    flex-direction: column;    
+    align-items: center;      
+  }
+
+  #right-side-nav li {
+    margin-left: 0;            
+    margin-top: 10px;          
+  }
+}
