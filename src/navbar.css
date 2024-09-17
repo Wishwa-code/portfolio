@@ -71,6 +71,10 @@
     padding-left: 0;
 }
 
+
+.inner-tab-text:hover{
+  color: #ffe400;
+}
 /* Style for the right side (navigation links) */
 
 

@@ -3,17 +3,36 @@ import './navbar.css'
 import './section1.css'
 import './section2.css'
 import './education.css'
+import './section5.css'
 import {BIS, GDA} from './edu.js'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Spline from '@splinetool/react-spline';
-import myphoto from './images/me.jpeg'
-import linkedin from './images/linkedin.png'
-import github from './images/github.png'
-import insta from './images/instagram.png'
+import myphoto from './images/me.jpeg';
+import linkedin from './images/linkedin.png';
+import github from './images/github.png';
+import githubhover from './images/githubhover.png';
+import insta from './images/instagram.png';
+import instahover from './images/instahover.png';
+import linkedinhover from './images/linkedinhover.png';
+import data_chart from './images/datachart.png';
+import bullet from './images/play.png'
+
 
 function App() {
 
   const [eduview, setEduview ] = useState('title1');
+  const [isHoveredinsta, setIsHoveredinsta] = useState(false);
+  const [isHoveredgithub, setIsHoveredgithub] = useState(false);
+  const [isHoveredlinkedin, setIsHoveredlinkedin] = useState(false);
+  const section2Ref = useRef(null);
+  const section3Ref = useRef(null);
+  const section4Ref = useRef(null);
+  const section5Ref = useRef(null);
+  const [barPosition, setBarPosition] = useState('');
+
+  const scrollToSection = (sectionRef) => {
+    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
 
   const setview = (view) => {
     setEduview(view);
@@ -22,15 +41,39 @@ function App() {
   const renderEdu = () => {
     console.log("ekk vaduna")
     switch(eduview) {
-      case 'BIS':
-        return <div>this is temp text</div>
+      case 'EJP':
+        return <div><p>thisis some text</p></div>
       case 'GDA':
         return <GDA/>
       case 'WPP':
         return <div>title3</div>
       default:
-        return <BIS/> 
+        return <BIS/>
       }
+  }
+
+  const sendEmail = () => {
+    const email = "recipient@example.com";
+    const subject = "Your Subject";
+    const body = "Hello,\n\nThis is the email body.";
+    
+    // Construct the mailto link
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open Gmail in a new tab
+    window.open(mailtoLink, '_blank');
+  };
+
+  const [isVisible, setIsVisible] = useState(false); // State to track visibility  
+
+  const handleDisplayToggle = () => {  
+      setIsVisible(!isVisible); // Toggle the visibility state  
+  };
+
+  const [isBizvisible, setIsBizvisible] = useState(false);
+
+  const handlebusinessDisplayToggle = () => {
+    setIsBizvisible(!isBizvisible);
   }
 
   return (
@@ -42,7 +85,7 @@ function App() {
             </div>
           </div>
           <div id="vertical-text-wrapper">
-              <p id="vertical-text">vishvajayanath@gmail.com</p>
+              <button onClick={sendEmail} id="vertical-text">vishvajayanath@gmail.com</button>
           </div> 
         </div>
         <div id="vertical-button-left">
@@ -50,9 +93,37 @@ function App() {
             <div id="left-hairline-inner">
             </div>
           </div>
-          <div><img id="linkedin-logo" src={linkedin} alt="linked-in"/></div>
-          <div><img id="insta-logo" src={insta} alt="insta"/></div>
-          <div><img id="git-logo" src={github} alt="git"/></div>
+
+          <div
+              className="image-container"
+              onMouseEnter={() => setIsHoveredlinkedin(true)}
+              onMouseLeave={() => setIsHoveredlinkedin(false)} 
+          >
+            <a href="https://www.linkedin.com/in/wishwa-subhasingha-2404051b5/" target="_blank" rel="noopener noreferrer">
+                <img id="side-bar-buttons-linkedin" src={isHoveredlinkedin ? linkedinhover : linkedin} alt="linked-in"/>
+            </a>
+          </div>
+
+          <div
+              className="image-container"
+                  onMouseEnter={() => setIsHoveredinsta(true)}
+                  onMouseLeave={() => setIsHoveredinsta(false)} 
+              >
+                <a href="https://www.instagram.com/_wishwa_/" target="_blank" rel="noopener noreferrer">
+                    <img id="side-bar-buttons-insta" src={isHoveredinsta ? instahover : insta} alt="linked-in"/>
+                </a>
+          </div>
+
+          <div
+              className="image-container"
+              onMouseEnter={() => setIsHoveredgithub(true)}
+              onMouseLeave={() => setIsHoveredgithub(false)} 
+          >
+            <a href="https://github.com/Wishwa-code" target="_blank" rel="noopener noreferrer">
+                <img id="side-bar-buttons-github" src={isHoveredgithub ? githubhover : github} alt="linked-in"/>
+            </a>
+          </div>
+
         </div>
         <div id="header">
           <div id="left-side-nav">
@@ -65,34 +136,46 @@ function App() {
           <div id="right-side-nav">
 
               <div className="inner-tab">
-                <div className="inner-tab-no">01. </div>
-                <div className="inner-tab-text">about</div>
+                <button className="inner-tab-button-01" onClick={() => scrollToSection(section2Ref)}>
+                  <div className="inner-tab-no">01. </div>
+                  <div className="inner-tab-text">about</div>
+                </button>
               </div>
 
               <div className="inner-tab">
-                <div className="inner-tab-no"> 02.</div>
-                <div className="inner-tab-text">timelapse</div>
+                <button className="inner-tab-button-01" onClick={() => scrollToSection(section3Ref)}>
+                  <div className="inner-tab-no"> 02.</div>
+                  <div className="inner-tab-text">timelapse</div>
+                </button>
               </div>
 
               <div className="inner-tab">
-                <div className="inner-tab-no"> 03.</div>
-                <div className="inner-tab-text">projects</div>
+                <button className="inner-tab-button-01" onClick={() => scrollToSection(section4Ref)}>
+                  <div className="inner-tab-no"> 03.</div>
+                  <div className="inner-tab-text">projects</div>
+                </button>
               </div>
 
               <div className="inner-tab">
-                <div className="inner-tab-no">04.</div>
-                <div className="inner-tab-text">contact</div>
+                <button className="inner-tab-button-01" onClick={() => scrollToSection(section5Ref)} >
+                  <div className="inner-tab-no">04.</div>
+                  <div className="inner-tab-text">contact</div>
+                </button>
               </div>
 
               <div className="inner-tab">
-                <div className="inner-tab-no">05.</div>
-                <div className="inner-tab-text">Resume</div>
+                <button className="inner-tab-button-01" >
+                  <div className="inner-tab-no">05.</div>
+                  <div className="inner-tab-text">Resume</div>
+                </button>
               </div>
 
           </div>
         </div>
         <div id="body">
           <div id="inner-body">
+
+
             <div id="section-1">
               <p id="first-line">Hi, my name is</p>
               <p id="second-line">Wishwa Jayanath </p>
@@ -107,7 +190,7 @@ function App() {
 
 
 
-            <div id="section-2">
+            <div id="section-2" ref={section2Ref}>
               <div id="section-2-header">
                 <div className="section-header-no">
                   <p> 01.</p>
@@ -123,51 +206,87 @@ function App() {
                       <p>Hello! My name is Wishwa and I enjoy finding bugs and optimizing web and mobile application to deliver exceptional products to end users.</p>
                       <p> My interest in software testing started back in 2021 wh <a href="https://wearedesigners.net/" target="_blank">software development company</a> en i decided to learn about cyber security as a part of my second year research project.</p><p>
 Fast forward to today, and I've had the priviledge of working at well known software development company where i got the oppurtunity to learn more about mobile and web applications testing.
-My main focus these days is learning more about Machine Learning and Artificial Intelligence to adapt my skill set to fast moving landscape of the software industry.</p><p>
-I also recently completed Google Data Analytics Professional Certificate that covers fundamental knowledge for ML and AI development.
-
-Here are a few technologies and tools I’ve been working with recently:</p>
+</p>
                     </div>
                     <div id="text-bottom">
                       <div id="bio-list-left">
-                        <ul>
-                          <li>React</li>
-                          <li>Appium</li>
-                          <li>Google Analytics</li>
-                        </ul>
+
+                        <div className='left-list-item'>
+                          <div className='left-list-icon'></div>
+                          <div className='left-list-name'>Somethng 2</div>
+                        </div>
+
+                        <div className='left-list-item'>
+                          <div className='left-list-icon'></div>
+                          <div className='left-list-name'>Something 1</div>
+                        </div>
+
+                        <div className='left-list-item'> 
+                          <div className='left-list-icon'></div>
+                          <div className='left-list-name'>something 2</div>
+                        </div>
+
                       </div>
-                      <div id="bio-list-right">
-                        <ul>
-                          <li>Flask</li>
-                          <li>Databricks</li>
-                          <li>WebFlow</li>
-                        </ul>
+                      <div id="bio-list-left">
+
+                        <div className='left-list-item'>
+                          <div className='left-list-icon'></div>
+                          <div className='left-list-name'>Somethng 2</div>
+                        </div>
+
+                        <div className='left-list-item'>
+                          <div className='left-list-icon'></div>
+                          <div className='left-list-name'>Something 1</div>
+                        </div>
+
+                        <div className='left-list-item'> 
+                          <div className='left-list-icon'></div>
+                          <div className='left-list-name'>something 2</div>
+                        </div>
+
                       </div>
+                      
+
                     </div>
 
                 </div>
                 <div id="bio-inner-right">
-                    <img src={myphoto} alt="me"/>
+                   <div id="inner-right-image-box">
+                      <img id="bio-inner-right-image" src={myphoto} alt="me"/>
+                      <div id="bio-right-image-background"></div>
+                   </div>
+                   <div id="inner-right-borderbox">
+                      background
+                   </div> 
+                    
                 </div>
               </div>
             </div>
 
 
-            <div id="section-3">
+            <div id="section-3" ref={section3Ref}>
               <div id="section-3-header">
                 <div className="section-header-no">
-                  <p> 01.</p>
+                  <p> 02.</p>
                 </div>
                 <div className="section-header-text">
                   <p> Education</p>
                 </div>
               </div>
+
+
               <div id="section-3-inner">
+
+
+                <div id="section-3-left-bar" style={{ transform: `translateY(${barPosition}px)` }}>  
+                </div>
+
+
                 <div id="section-3-buttons">  
-                    <button className="edu-left-button" onClick={() => setview("BIS")}>Business Information Systems</button>  
-                    <button className="edu-left-button" onClick={() => setview("GDA")}>Google Data Analytics</button> 
-                    <button className="edu-left-button" onClick={() => setview("WPP")}>Web Programming with Python</button> 
-                    <button className="edu-left-button" onClick={() => setview("EJP")}>Evotech Java Programming</button> 
+                    <button className="edu-left-button" onClick={() => {setview("BIS"); setBarPosition(0)}}>Business Information Systems</button>  
+                    <button className="edu-left-button" onClick={() => {setview("GDA"); setBarPosition(50)}}>Google Data Analytics</button> 
+                    <button className="edu-left-button" onClick={() => {setview("WPP"); setBarPosition(100)}}>Web programming with python</button> 
+                    <button className="edu-left-button" onClick={() => {setview("BIS"); setBarPosition(150)}}>Evotech Java Programming</button> 
                 </div> 
                 <div id="section-3-display">
                   {renderEdu()}
@@ -177,26 +296,58 @@ Here are a few technologies and tools I’ve been working with recently:</p>
 
 
 
-            <div id="section-4">
+            <div id="section-4" ref={section4Ref}>
+
+              <div id="section-3-header">
+                <div className="section-header-no">
+                  <p> 03.</p>
+                </div>
+                <div className="section-header-text">
+                  <p> Some Things I've Built</p>
+                </div>
+              </div>
 
               <div id="built-project-1">
                 <div id="featured-p-image">
-                  <p>some text on image</p>
+                  <img id="data-chart" src={data_chart} alt="data_chart" />
                 </div>
                 <div id="featured-p-info">
-                  <p>some text on texts side</p>
+                  <div className="feature-project-heading"> Featured Project</div>
+                  <div className="featured-project-heading-2"> Haylon Theme</div>
+                  <div className="featured-project-info">A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm</div>
+                  <div className="tools-list">
+                    <div>VS code</div>
+                    <div>Sublime Text</div>
+                    <div>Atom</div>
+                    <div>hyper</div>
+                  </div>
+                  <div className="feature-project-button-list">
+                    <button className="feature-project-button">git</button>
+                    <button className="feature-project-button">link</button>
+                  </div>
                 </div>
 
               </div>
 
               <div id="build-project-2">
-                <div id="featured-p2-image">
-                  <p>some text on image sdfgsd</p>
-                </div>
                 <div id="featured-p2-info">
-                  <p>some text on texts side</p>
+                  <div className="feature-project-heading"> Featured Project</div>
+                  <div className="featured-project-heading-2"> Haylon Theme</div>
+                  <div className="featured-project-info">A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm</div>
+                  <div className="tools-list">
+                    <div>VS code</div>
+                    <div>Sublime Text</div>
+                    <div>Atom</div>
+                    <div>hyper</div>
+                  </div>
+                  <div className="feature-project-button-list">
+                    <button className="feature-project-button">git</button>
+                    <button className="feature-project-button">link</button>
+                  </div>
                 </div>
-
+                <div id="featured-p2-image">
+                  <img id="data-chart" src={data_chart} alt="data_chart" />
+                </div>
               </div>
 
             </div>
@@ -205,14 +356,23 @@ Here are a few technologies and tools I’ve been working with recently:</p>
 
             <div id="section-5">
               
+              
               <div id="section-5-header">
-                <h1>this is the section for other noteworthy projects</h1>
+                <div className="section-header-no">
+                  <p> </p>
+                </div>
+                <div className="section-header-text">
+                  <p> Other Noteworthy Project</p>
+                </div>
               </div>
+
 
               <div id="coding-projects">
                 <div id="coding-projects-header">
-                  <h1>some text</h1>
+                  <p>Development Projects</p>
                 </div>
+
+                
                 <div id="project-grid">
                   
                   <div className="grid-item">
@@ -238,23 +398,111 @@ Here are a few technologies and tools I’ve been working with recently:</p>
                   <div className="grid-item">
                     <p>this is just a one grid</p>
                   </div>
-
-
                 </div>
+
+                <div id="project-grid-switch" style={{ display: isVisible ? 'grid' : 'none' }}>
+                  
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                 
+                </div> 
+
+                <div id="switch-button-section">  
+                  <button id="display-button" onClick={handleDisplayToggle}>  
+                      {isVisible ? 'Hide' : 'Show'} Project Grid  
+                  </button>  
+                </div> 
+
+
               </div>
 
-              <div>
-                <p>this is the section for business implementetaion and managemnet related projects</p>
-              </div>
               
+              <div id="business-projects">
+                <div id="coding-projects-header">
+                  <p>Business Projects</p>
+                </div>
+
+                
+                <div className="project-grid">
+                  
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+                </div>
+
+                <div id="business-grid-switch" style={{ display: isBizvisible ? 'grid' : 'none' }}>
+                  
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                  <div className="grid-item">
+                    <p>this is just a one grid</p>
+                  </div>
+
+                  
+                </div> 
+
+                <div id="b-switch-button-section">  
+                  <button id="display-button" onClick={handlebusinessDisplayToggle}>  
+                      {isBizvisible ? 'Hide' : 'Show'} Project Grid  
+                  </button>  
+                </div> 
+
+
+              </div>
               
 
             </div>
 
 
 
-            <div id="section-6">
-              <p> this is the sectio to display get in touch</p>
+            <div id="section-6" ref={section5Ref}>
+              <div> 04. What's Next?</div>
+              <div> Get In Touch</div>
+              <div> I am actively seeking opportunities to contribute my business information systems knowledge and
+                 am eager to learn and grow alongside your talented team. Please feel free to reach out if you think
+                  I'd be a good fit – I'd love to chat!
+              </div>
+              <div><button>say hello</button></div>
+
+            </div>
+            <div id="footer-inner">
+              <p> Designed & Built by wishwa jayanath</p>
             </div>
 
 
@@ -262,7 +510,7 @@ Here are a few technologies and tools I’ve been working with recently:</p>
           </div>
         </div>
         <div id="footer">
-          <p>this is the footer</p>
+          <p>Designed & Built</p>
         </div>
        
       
