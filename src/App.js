@@ -4,6 +4,7 @@ import './section1.css'
 import './section2.css'
 import './education.css'
 import './section5.css'
+import './section4.css'
 import {BIS, GDA} from './edu.js'
 import { useState, useRef } from 'react';
 import Spline from '@splinetool/react-spline';
@@ -298,7 +299,7 @@ Fast forward to today, and I've had the priviledge of working at well known soft
 
             <div id="section-4" ref={section4Ref}>
 
-              <div id="section-3-header">
+              <div id="section-4-header">
                 <div className="section-header-no">
                   <p> 03.</p>
                 </div>
@@ -310,20 +311,31 @@ Fast forward to today, and I've had the priviledge of working at well known soft
               <div id="built-project-1">
                 <div id="featured-p-image">
                   <img id="data-chart" src={data_chart} alt="data_chart" />
+                  <div id="data-chart-background"></div>
                 </div>
                 <div id="featured-p-info">
                   <div className="feature-project-heading"> Featured Project</div>
                   <div className="featured-project-heading-2"> Haylon Theme</div>
                   <div className="featured-project-info">A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm</div>
                   <div className="tools-list">
-                    <div>VS code</div>
-                    <div>Sublime Text</div>
-                    <div>Atom</div>
-                    <div>hyper</div>
+                    <div className='tools-list-item'>VS code</div>
+                    <div className='tools-list-item'>Sublime Text</div>
+                    <div className='tools-list-item'>Atom</div>
+                    <div className='tools-list-item'>hyper</div>
                   </div>
                   <div className="feature-project-button-list">
-                    <button className="feature-project-button">git</button>
-                    <button className="feature-project-button">link</button>
+
+                    <div>
+                        <a href="https://www.linkedin.com/in/wishwa-subhasingha-2404051b5/" target="_blank" rel="noopener noreferrer">
+                            <div id="side-bar-buttons-linkedin-p1" ></div>
+                        </a>
+                      </div>
+
+                      <div>
+                            <a href="https://www.instagram.com/_wishwa_/" target="_blank" rel="noopener noreferrer">
+                                <div id="side-bar-buttons-github-p1"> </div>
+                            </a>
+                      </div>
                   </div>
                 </div>
 
@@ -333,7 +345,7 @@ Fast forward to today, and I've had the priviledge of working at well known soft
                 <div id="featured-p2-info">
                   <div className="feature-project-heading"> Featured Project</div>
                   <div className="featured-project-heading-2"> Haylon Theme</div>
-                  <div className="featured-project-info">A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm</div>
+                  <div className="featured-project-2-info">A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm</div>
                   <div className="tools-list">
                     <div>VS code</div>
                     <div>Sublime Text</div>
@@ -341,8 +353,26 @@ Fast forward to today, and I've had the priviledge of working at well known soft
                     <div>hyper</div>
                   </div>
                   <div className="feature-project-button-list">
-                    <button className="feature-project-button">git</button>
-                    <button className="feature-project-button">link</button>
+
+                    <div
+                          className="image-container"
+                          onMouseEnter={() => setIsHoveredlinkedin(true)}
+                          onMouseLeave={() => setIsHoveredlinkedin(false)} 
+                      >
+                        <a href="https://www.linkedin.com/in/wishwa-subhasingha-2404051b5/" target="_blank" rel="noopener noreferrer">
+                            <img id="side-bar-buttons-linkedin" src={isHoveredlinkedin ? linkedinhover : linkedin} alt="linked-in"/>
+                        </a>
+                      </div>
+
+                      <div
+                          className="image-container"
+                              onMouseEnter={() => setIsHoveredinsta(true)}
+                              onMouseLeave={() => setIsHoveredinsta(false)} 
+                          >
+                            <a href="https://www.instagram.com/_wishwa_/" target="_blank" rel="noopener noreferrer">
+                                <img id="side-bar-buttons-insta" src={isHoveredinsta ? instahover : insta} alt="linked-in"/>
+                            </a>
+                      </div>
                   </div>
                 </div>
                 <div id="featured-p2-image">
@@ -376,7 +406,19 @@ Fast forward to today, and I've had the priviledge of working at well known soft
                 <div id="project-grid">
                   
                   <div className="grid-item">
-                    <p>this is just a one grid</p>
+                    <div className='logo-bar'>
+                      <div className='first-icon'>
+
+                      </div>
+                      <div className='second-logo'></div>
+                    </div>
+                    <div className='grid-item-title'>EasyChannel</div>
+                    <div className='grid-item-body'>A mobile application for private medical institutes to manage appointments powered by ML model to preedict session time durations.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>react</div>
+                      <div className='grid-item-tool-list-item'>java</div>
+                      <div className='grid-item-tool-list-item'>python</div>
+                    </div>
                   </div>
 
                   <div className="grid-item">

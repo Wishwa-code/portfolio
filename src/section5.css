@@ -28,35 +28,102 @@
 #project-grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:10px;
+  gap:20px;
   width:100%;
+  justify-items: center;
 }
 .grid-item {
-  background-color: coral;
+  background-color: #1f2833;
   color:white;
-  padding:20px;
-
+  padding:30px;
+  height:240px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width:250px;
+  display: flex;
+  flex-direction: coloum;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+.grid-item:hover{
+  transform: translateY(-10px);
+}
+
+.logo-bar{
+  height: 60px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-icon{
+  height:50px;
+  width:50px;
+  background-image: url('images/projecticon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.second-logo{
+  height:20px;
+  width:20px;
+  background-image: url('images/link.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.grid-item-title{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+  margin-top:18px;
+  font-weight:600;
+  font-size:22px;
+  color:#ccd6f6;
+}
+
+.grid-item-body{
+  display: flex;
+  flex-direction: row;
+  margin-top:10px;
+  font-family:  'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+  text-align:left;
+  line-height:19px;
+  font-size: 15px;
+  color:#8891b0;
+}
+
+.grid-item-tool-list{
+  margin-top:15px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  font-family: Inconsolata, monospace;
+  font-size: 15px;
+  color:#8891b0;;
+  
+}
+
+.grid-item-tool-list-item{
+  padding-right: 10px;
+}
 #project-grid-switch{
   margin-top: 20px;
   grid-template-columns: repeat(3, 1fr);
   gap:10px;
   width:100%;
 }
-.grid-item {
-  background-color: coral;
-  color:white;
-  padding:20px;
-
-}
 
 #switch-button-section{
   margin-top: 50px;
 }
-
-
-
 
 #business-projects{
   display: flex;
@@ -75,12 +142,6 @@
   gap:10px;
   width:100%;
 }
-.grid-item {
-  background-color: coral;
-  color:white;
-  padding:20px;
-
-}
 
 #business-grid-switch{
   margin-top: 20px;
@@ -88,15 +149,7 @@
   gap:10px;
   width:100%;
 }
-.grid-item {
-  background-color: coral;
-  color:white;
-  padding:20px;
-
-}
 
 #b-switch-button-section{
   margin-top: 50px;
 }
-
-
