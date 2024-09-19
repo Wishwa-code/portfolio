@@ -57,19 +57,42 @@
     font-family:  Inconsolata, monospace;
     letter-spacing: .25px;
     margin-right: auto;
-    padding: 5px 0px 5px 5px;
+    padding: 15px 0px 5px 5px;
+    
+}
+.inner-tab-no-resume{
+    padding-right: 2px;
+    color:#ffe400;
+    font-family:  Inconsolata, monospace;
+    letter-spacing: .25px;
+    margin-right: auto;
+
 }
 
 .inner-tab-text {
     letter-spacing: .25px;
     margin-right: auto;
-    padding: 5px 10px 5px 5px;
+    padding: 15px 10px 5px 5px;
     font-family: Inconsolata, monospace;
     font-size: 15px;
     line-height: 20px;
     text-decoration: none;
     padding-left: 0;
+    margin-left: 5px;
 }
+
+.inner-tab-text-resume {
+    letter-spacing: .25px;
+    margin-right: auto;
+
+    font-family: Inconsolata, monospace;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none;
+    padding-left: 0;
+    
+}
+
 
 
 .inner-tab-text:hover{

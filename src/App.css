@@ -183,12 +183,6 @@
   padding-bottom: 20px;
 }
 
-
-
-
-
-
-
 #section-5{
   display: flex;
   flex-direction: column;
@@ -220,23 +214,9 @@
 
 }
 
-#section-6{
-  display: flex;
-  height:90vh;
-  color: #ffffff;
-  flex-direction: column;
-}
 
-#footer-inner{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height:10vh;
-  color: #ffffff;
-  align-items: center;
-  width:100%;
 
-}
+
 
 
 #side-bar-buttons-linkedin{

@@ -5,6 +5,7 @@ import './section2.css'
 import './education.css'
 import './section5.css'
 import './section4.css'
+import './section6.css'
 import {BIS, GDA} from './edu.js'
 import { useState, useRef } from 'react';
 import Spline from '@splinetool/react-spline';
@@ -165,9 +166,9 @@ function App() {
               </div>
 
               <div className="inner-tab">
-                <button className="inner-tab-button-01" >
-                  <div className="inner-tab-no">05.</div>
-                  <div className="inner-tab-text">Resume</div>
+                <button className="email-link-top" >
+                  <div className="inner-tab-no-resume">05.</div>
+                  <div className="inner-tab-text-resume">Resume</div>
                 </button>
               </div>
 
@@ -429,17 +430,6 @@ Fast forward to today, and I've had the priviledge of working at well known soft
                     <p>this is just a one grid</p>
                   </div>
 
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
-
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
-
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
                 </div>
 
                 <div id="project-grid-switch" style={{ display: isVisible ? 'grid' : 'none' }}>
@@ -460,7 +450,7 @@ Fast forward to today, and I've had the priviledge of working at well known soft
                 </div> 
 
                 <div id="switch-button-section">  
-                  <button id="display-button" onClick={handleDisplayToggle}>  
+                  <button className='email-link' id="display-button" onClick={handleDisplayToggle}>  
                       {isVisible ? 'Hide' : 'Show'} Project Grid  
                   </button>  
                 </div> 
@@ -488,18 +478,7 @@ Fast forward to today, and I've had the priviledge of working at well known soft
                   <div className="grid-item">
                     <p>this is just a one grid</p>
                   </div>
-
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
-
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
-
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
+                  
                 </div>
 
                 <div id="business-grid-switch" style={{ display: isBizvisible ? 'grid' : 'none' }}>
@@ -520,7 +499,7 @@ Fast forward to today, and I've had the priviledge of working at well known soft
                 </div> 
 
                 <div id="b-switch-button-section">  
-                  <button id="display-button" onClick={handlebusinessDisplayToggle}>  
+                  <button className='email-link' id="display-button" onClick={handlebusinessDisplayToggle}>  
                       {isBizvisible ? 'Hide' : 'Show'} Project Grid  
                   </button>  
                 </div> 
@@ -534,17 +513,27 @@ Fast forward to today, and I've had the priviledge of working at well known soft
 
 
             <div id="section-6" ref={section5Ref}>
-              <div> 04. What's Next?</div>
-              <div> Get In Touch</div>
-              <div> I am actively seeking opportunities to contribute my business information systems knowledge and
+              <div id="section-6-header" > 
+                <div id="section-6-header-no"> 04. </div>
+                <div id="section-6-header-text"> What's next</div>
+              </div>
+              <div id="section-6-topic"> Get In Touch</div>
+              <div id="section-6-body"> I am actively seeking opportunities to contribute my business information systems knowledge and
                  am eager to learn and grow alongside your talented team. Please feel free to reach out if you think
                   I'd be a good fit – I'd love to chat!
               </div>
-              <div><button>say hello</button></div>
+              <div className='style-button-container'>
+                
+                <a class="email-link" href="mailto:brittany.chiang@gmail.com" rel="noopener noreferrer" target="_blank">Say Hello</a>
+                
+                
+              </div>
 
             </div>
+
+
             <div id="footer-inner">
-              <p> Designed & Built by wishwa jayanath</p>
+              <a href="https://github.com/Wishwa-code/portfolio" target="_blank"><p> Designed & Built by wishwa jayanath</p></a>
             </div>
 
 
