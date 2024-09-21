@@ -2,7 +2,7 @@ import './App.css';
 import './navbar.css'
 import './section1.css'
 import './section2.css'
-import './education.css'
+import './section3.css'
 import './section5.css'
 import './section4.css'
 import './section6.css'
@@ -32,6 +32,14 @@ function App() {
   const section5Ref = useRef(null);
   const [barPosition, setBarPosition] = useState('');
 
+  const [activeTab, setActiveTab] = useState(0);
+
+  const tabs = ['Tab 1', 'Tab 2', 'Tab 3'];
+
+  const handleTabClick = (index) => {
+    setActiveTab(index); 
+  };
+
   const scrollToSection = (sectionRef) => {
     sectionRef.current.scrollIntoView({ behavior: 'smooth' });
   }
@@ -43,12 +51,8 @@ function App() {
   const renderEdu = () => {
     console.log("ekk vaduna")
     switch(eduview) {
-      case 'EJP':
-        return <div><p>thisis some text</p></div>
-      case 'GDA':
+      case 'FPA':
         return <GDA/>
-      case 'WPP':
-        return <div>title3</div>
       default:
         return <BIS/>
       }
@@ -132,7 +136,7 @@ function App() {
             <Spline
               scene="https://prod.spline.design/HaRl7e8cAP2nJbBy/scene.splinecode" 
               width={200}
-              height={100}
+              height={80}
             />
           </div>
           <div id="right-side-nav">
@@ -140,34 +144,34 @@ function App() {
               <div className="inner-tab">
                 <button className="inner-tab-button-01" onClick={() => scrollToSection(section2Ref)}>
                   <div className="inner-tab-no">01. </div>
-                  <div className="inner-tab-text">about</div>
+                  <div className="inner-tab-text">About</div>
                 </button>
               </div>
 
               <div className="inner-tab">
                 <button className="inner-tab-button-01" onClick={() => scrollToSection(section3Ref)}>
                   <div className="inner-tab-no"> 02.</div>
-                  <div className="inner-tab-text">timelapse</div>
+                  <div className="inner-tab-text">Experience</div>
                 </button>
               </div>
 
               <div className="inner-tab">
                 <button className="inner-tab-button-01" onClick={() => scrollToSection(section4Ref)}>
                   <div className="inner-tab-no"> 03.</div>
-                  <div className="inner-tab-text">projects</div>
+                  <div className="inner-tab-text">Work</div>
                 </button>
               </div>
 
               <div className="inner-tab">
                 <button className="inner-tab-button-01" onClick={() => scrollToSection(section5Ref)} >
                   <div className="inner-tab-no">04.</div>
-                  <div className="inner-tab-text">contact</div>
+                  <div className="inner-tab-text">Contact</div>
                 </button>
               </div>
 
               <div className="inner-tab">
                 <button className="email-link-top" >
-                  <div className="inner-tab-no-resume">05.</div>
+                  <div className="inner-tab-no-resume"></div>
                   <div className="inner-tab-text-resume">Resume</div>
                 </button>
               </div>
@@ -179,15 +183,15 @@ function App() {
 
 
             <div id="section-1">
+
               <p id="first-line">Hi, my name is</p>
-              <p id="second-line">Wishwa Jayanath </p>
+              <p id="second-line">Wishwa Jayanath. </p>
               <p id="third-line">I build things for the web.</p>
-              <p id="fourth-line">I recently gradated from university of Westminster 
-                in Business Information Systems. I am skilled in Python, JavaScript and 
-                Dart Programming languages. I am passionate about developing machine 
-                learning models, and i recently built a prediction system for Sri Lankan 
-                export market. Currently seeking a opportunity to work with a innovative 
-                company while learning new things.</p>
+              <p id="fourth-line">I'm a Full stack web developer recently graduted from university of westminster with Upper second Honours award in Business Information Systems. Currently i am seeking for job oppurtunity to work as a <span id="highlight-text">Associate web developer</span>. </p>
+                <button className="email-link-cto" onClick={() => scrollToSection(section4Ref)}>
+                  <div className="inner-tab-no-resume"></div>
+                  <div className="inner-tab-text-resume">Check out my work!</div>
+                </button>
             </div>
 
 
@@ -195,37 +199,40 @@ function App() {
             <div id="section-2" ref={section2Ref}>
               <div id="section-2-header">
                 <div className="section-header-no">
-                  <p> 01.</p>
+                   01.
                 </div>
                 <div className="section-header-text">
-                  <p> About me</p>
+                  About me
+                </div>
+                <div className="section-header-hairline">
+          
                 </div>
               </div>
               <div id="bio-inner">
                 <div id="bio-inner-left">
                     <div id="text-top">
                      
-                      <p>Hello! My name is Wishwa and I enjoy finding bugs and optimizing web and mobile application to deliver exceptional products to end users.</p>
-                      <p> My interest in software testing started back in 2021 wh <a href="https://wearedesigners.net/" target="_blank">software development company</a> en i decided to learn about cyber security as a part of my second year research project.</p><p>
-Fast forward to today, and I've had the priviledge of working at well known software development company where i got the oppurtunity to learn more about mobile and web applications testing.
-</p>
+                      <p>Hello! My name is Wishwa and I enjoy creating robust web application to solve complex business problems.</p>
+                      <p> My interest in software development started back in 2006 when i first received computer as a gift. I got a scholarship to enter matara rahula collage from sooriyawewa national school.</p><p> After completing O/L exam with 8-A and 1-B pass i decided enter Business Information System degree program at IIT to learn more about building IT systems  
+</p><p>Fast forward to today, and I've had the priviledge of working at well known  <a href="https://wearedesigners.net/" target="_blank">software development company</a>  where i got the oppurtunity to learn more about mobile and web applications testing.
+</p><p>Here are a few technologies I’ve been working with recently:</p>
                     </div>
                     <div id="text-bottom">
                       <div id="bio-list-left">
 
                         <div className='left-list-item'>
                           <div className='left-list-icon'></div>
-                          <div className='left-list-name'>Somethng 2</div>
+                          <div className='left-list-name'>Django</div>
                         </div>
 
                         <div className='left-list-item'>
                           <div className='left-list-icon'></div>
-                          <div className='left-list-name'>Something 1</div>
+                          <div className='left-list-name'>React</div>
                         </div>
 
                         <div className='left-list-item'> 
                           <div className='left-list-icon'></div>
-                          <div className='left-list-name'>something 2</div>
+                          <div className='left-list-name'>Selenium</div>
                         </div>
 
                       </div>
@@ -233,17 +240,17 @@ Fast forward to today, and I've had the priviledge of working at well known soft
 
                         <div className='left-list-item'>
                           <div className='left-list-icon'></div>
-                          <div className='left-list-name'>Somethng 2</div>
+                          <div className='left-list-name'>AWS</div>
                         </div>
 
                         <div className='left-list-item'>
                           <div className='left-list-icon'></div>
-                          <div className='left-list-name'>Something 1</div>
+                          <div className='left-list-name'>Git</div>
                         </div>
 
                         <div className='left-list-item'> 
                           <div className='left-list-icon'></div>
-                          <div className='left-list-name'>something 2</div>
+                          <div className='left-list-name'>PostgreSQL</div>
                         </div>
 
                       </div>
@@ -272,7 +279,7 @@ Fast forward to today, and I've had the priviledge of working at well known soft
                   <p> 02.</p>
                 </div>
                 <div className="section-header-text">
-                  <p> Education</p>
+                  <p> Experience</p>
                 </div>
               </div>
 
@@ -282,13 +289,39 @@ Fast forward to today, and I've had the priviledge of working at well known soft
 
                 <div id="section-3-left-bar" style={{ transform: `translateY(${barPosition}px)` }}>  
                 </div>
-
-
                 <div id="section-3-buttons">  
-                    <button className="edu-left-button" onClick={() => {setview("BIS"); setBarPosition(0)}}>Business Information Systems</button>  
-                    <button className="edu-left-button" onClick={() => {setview("GDA"); setBarPosition(50)}}>Google Data Analytics</button> 
-                    <button className="edu-left-button" onClick={() => {setview("WPP"); setBarPosition(100)}}>Web programming with python</button> 
-                    <button className="edu-left-button" onClick={() => {setview("BIS"); setBarPosition(150)}}>Evotech Java Programming</button> 
+                    <button 
+                    style={{
+                      cursor: 'pointer',
+                      padding: '10px 20px',
+                      marginRight: '10px',
+                      backgroundColor:activeTab === 0 ? 'rgba(255,228,0,0.2)' : '',
+                      color: activeTab === 0 ? '#ffe400' : '#8891b0', // Change text color when active
+                      fontWeight: activeTab === 0 ? 'bold' : 'normal' // Bold the active tab text
+                    }}
+                    
+                    className="edu-left-button" id="first-highlighted" 
+                    onClick={() => {
+                      setview("WAD"); 
+                      setBarPosition(0)
+                      handleTabClick(0)
+                      }}>We are designers</button>  
+                    
+                    <button 
+                    style={{
+                        cursor: 'pointer',
+                        padding: '10px 20px',
+                        marginRight: '10px',
+                        backgroundColor:activeTab === 1 ? 'rgba(255,228,0,0.2)' : '',
+                        color: activeTab === 1 ? '#ffe400' : '#8891b0', // Change text color when active
+                        fontWeight: activeTab === 1 ? 'bold' : 'normal' // Bold the active tab text
+                      }}
+                    className="edu-left-button" 
+                    onClick={() => {
+                      setview("FPA"); 
+                      setBarPosition(50)
+                      handleTabClick(1)
+                      }}>Family Pairing Assocaiation</button> 
                 </div> 
                 <div id="section-3-display">
                   {renderEdu()}

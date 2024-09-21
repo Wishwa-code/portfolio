@@ -111,10 +111,10 @@
 
   position: fixed;
   bottom:0;
-  right: 25px;
+  right: 0;
   width: 50px;
   z-index: 100;
-  padding: 10px;
+  padding-right: 30px;
   display:flex;
   height: 80vh;
   flex-direction: column-reverse;
@@ -125,18 +125,20 @@
   flex-direction: column;
   align-items: center;
   width: 50px;
-  height:15vh;
-  margin-bottom: -20px;
-  margin-top: 30px;
+  height:100px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+
 }
 #right-hairline-inner{
   background-color: #8891b0;
   width: 1px;
   height:100%;
+  
 }
 #vertical-text-wrapper{
   width:50px;
-  height: 40vh;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,10 +146,10 @@
 #vertical-button-left {
   position: fixed;
   bottom:0;
-  left: 5vh;
+  left: 0;
   width: 50px;
   z-index: 100;
-  padding: 10px;
+  padding-left: 30px;
   height:fit-content;
   display: flex;
   flex-direction: column-reverse;
@@ -159,11 +161,11 @@
  align-items: center;
  bottom:0;
  margin-bottom: -10px;
- height:40px;
+ height:100px;
 }
 #left-hairline-inner{
   background-color: #8891b0;
-  height: 40px;
+  height: 100%;
   width:1px;
   align-items: center;
 }
@@ -293,3 +295,6 @@ iframe[src*="spline.design"] + div {
   color: #ffe400;
 }
 
+#highlight-text {
+  color:#ffe400
+}

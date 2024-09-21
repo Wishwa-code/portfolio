@@ -32,6 +32,7 @@
     font-family: "Inconsolata", monospace;
     padding-top: 10px;
     color: #8891b0;
+    text-align: left;
 }
 
 .main-content{
@@ -53,12 +54,28 @@
 .items-body-edu{
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top:10px;
 }
 
 .items-body-edu-bullet{
-
+  display: flex;
+  flex-direction: column;
+  width: 10px;
+  height:14px;
+  background-image: url('images/play.png') ;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size:contain;
+  padding-bottom: 5px;
+  margin-right: 10px;
 }
 
-.items-body-du-text{
-
+.items-body-edu-text{
+  text-align: left;  
+  line-height: 24px;
+  font-size: 15px;
+  width:600px;
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
 }
