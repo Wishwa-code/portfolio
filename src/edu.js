@@ -72,10 +72,64 @@ Sri Lankan organizations and 4 single-page websites.
 
 
 export function GDA () {
+    
+    const bisRef = useRef(null);
+
+    useEffect(() => {
+        if (bisRef.current){
+        bisRef.current.style.backgroundColour = 'darkbue';
+    }
+    },[]);
+
     return (
         <>
-        <p>GDAAAAAA</p>
+        <div id="BIS-inner-tab" ref={bisRef}>
+            <div className="first-header-row">
+                <div className="main-title">
+                    Social Media Manager
+                </div>
+                <div className="location">
+                    <div className="location-icon">
+                    &nbsp;@&nbsp;
+                    </div>
+                    <div className="location-name">
+                    Family pairing association
+                    </div>
+                </div>
+            </div>
+            <div className="time-period">June 2022 - June 2023</div>
+
+            <div className="body-of-edu">
+                <div className="items-body-edu">
+                    <div className="items-body-edu-bullet">
+                    </div>
+                    <div className="items-body-edu-text">
+                        Created a social media strategy to increase the organic reach of the social media channels.
+                    </div>
+                </div>
+            </div>
+
+            <div className="body-of-edu">
+                <div className="items-body-edu">
+                    <div className="items-body-edu-bullet">
+                    </div>
+                    <div className="items-body-edu-text">
+                        Managed the timely release of content content for all the media channels.
+                    </div>
+                </div>
+            </div>
+
+            <div className="body-of-edu">
+                <div className="items-body-edu">
+                    <div className="items-body-edu-bullet">
+                    </div>
+                    <div className="items-body-edu-text">
+                        Directed the process of creating video content from script to editing and release to the official channels.
+                    </div>
+                </div>
+            </div>
+
+        </div>
         </>
     )
-}
-
+} 

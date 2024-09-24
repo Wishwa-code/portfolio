@@ -41,14 +41,7 @@
     margin-bottom: 40px;
 }
 
-.style-button-container button{
-    display: flex;
-    width: 100px;
-    text-align: center;
-    background-color: #ffe400;
-    
 
-}
 
 .email-link {
     color: #ffe400;
@@ -70,6 +63,39 @@
     transform: translate(-5px, -5px);
 }
 
+.email-link-wp {
+    color: #ffe400;
+    background-color: transparent;
+    border: 1px solid #ffe400;
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 14px;
+    font-family: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+    line-height: 1;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#whatapp-icon{
+  height:20px;
+  width:20px;
+  background-image: url('images/whatsapp.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: transform;
+  margin-right: 10px;
+}
+
+.email-link-wp:hover{
+    outline: none;
+    box-shadow: 4px 4px 0 0 #ffe400;
+    transform: translate(-5px, -5px);
+}
 a {
     position:relative;
     display: inline-block;

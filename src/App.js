@@ -17,7 +17,9 @@ import insta from './images/instagram.png';
 import instahover from './images/instahover.png';
 import linkedinhover from './images/linkedinhover.png';
 import data_chart from './images/datachart.png';
-import bullet from './images/play.png'
+import bullet from './images/play.png';
+import samproj1 from './images/samproj1img.png';
+import samproj2 from './images/samproj2img.png'
 
 
 function App() {
@@ -59,7 +61,7 @@ function App() {
   }
 
   const sendEmail = () => {
-    const email = "recipient@example.com";
+    const email = "vishvajayanath@gmail.com";
     const subject = "Your Subject";
     const body = "Hello,\n\nThis is the email body.";
     
@@ -170,7 +172,7 @@ function App() {
               </div>
 
               <div className="inner-tab">
-                <button className="email-link-top" >
+                <button className="email-link-top" onClick={()=> (window.open('https://drive.google.com/file/d/1JbRp0fxRKmOd04rKPwStGvvNB9S5tFpZ/view?usp=sharing'))}>
                   <div className="inner-tab-no-resume"></div>
                   <div className="inner-tab-text-resume">Resume</div>
                 </button>
@@ -281,6 +283,9 @@ function App() {
                 <div className="section-header-text">
                   <p> Experience</p>
                 </div>
+                <div className="section-header-hairline">
+          
+                </div>
               </div>
 
 
@@ -340,77 +345,63 @@ function App() {
                 <div className="section-header-text">
                   <p> Some Things I've Built</p>
                 </div>
+                <div className="section-header-hairline">
+          
+                </div>
               </div>
 
               <div id="built-project-1">
                 <div id="featured-p-image">
-                  <img id="data-chart" src={data_chart} alt="data_chart" />
+                  <img id="data-chart" src={samproj1} alt="data_chart" />
                   <div id="data-chart-background"></div>
                 </div>
                 <div id="featured-p-info">
                   <div className="feature-project-heading"> Featured Project</div>
-                  <div className="featured-project-heading-2"> Haylon Theme</div>
-                  <div className="featured-project-info">A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm</div>
+                  <div className="featured-project-heading-2"> Ceylon2World</div>
+                  <div className="featured-project-info">Created a web app to predict export market potential of sri lankan export products using ARIMA model optimized with grid search mechanism combined with Neural Network to calculate residual errors. </div>
                   <div className="tools-list">
-                    <div className='tools-list-item'>VS code</div>
-                    <div className='tools-list-item'>Sublime Text</div>
-                    <div className='tools-list-item'>Atom</div>
-                    <div className='tools-list-item'>hyper</div>
+                    <div className='tools-list-item-right'>Flask</div>
+                    <div className='tools-list-item-right'>Sckit-learn</div>
+                    <div className='tools-list-item-right'>React</div>
+                    <div className='tools-list-item-right'>Tailwind CSS</div>
                   </div>
                   <div className="feature-project-button-list">
-
-                    <div>
-                        <a href="https://www.linkedin.com/in/wishwa-subhasingha-2404051b5/" target="_blank" rel="noopener noreferrer">
-                            <div id="side-bar-buttons-linkedin-p1" ></div>
-                        </a>
-                      </div>
-
                       <div>
-                            <a href="https://www.instagram.com/_wishwa_/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/Wishwa-code/FYP_BI_app" target="_blank" rel="noopener noreferrer">
                                 <div id="side-bar-buttons-github-p1"> </div>
                             </a>
                       </div>
                   </div>
                 </div>
-
               </div>
 
               <div id="build-project-2">
                 <div id="featured-p2-info">
                   <div className="feature-project-heading"> Featured Project</div>
-                  <div className="featured-project-heading-2"> Haylon Theme</div>
-                  <div className="featured-project-2-info">A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm</div>
+                  <div className="featured-project-heading-2"> Bellabeat Case Study</div>
+                  <div className="featured-project-2-info">R notebook created by analyzing publicly available smart device user's data to identify trends that can be used by Bella beat business owners to optimize their marketing strategy.</div>
                   <div className="tools-list">
-                    <div>VS code</div>
-                    <div>Sublime Text</div>
-                    <div>Atom</div>
-                    <div>hyper</div>
+                    <div className='tools-list-item-left'>VS code</div>
+                    <div className='tools-list-item-left'>Sublime Text</div>
+                    <div className='tools-list-item-left'>Atom</div>
+                    <div className='tools-list-item-left`'>hyper</div>
                   </div>
                   <div className="feature-project-button-list">
 
                     <div
-                          className="image-container"
-                          onMouseEnter={() => setIsHoveredlinkedin(true)}
-                          onMouseLeave={() => setIsHoveredlinkedin(false)} 
+                    
                       >
-                        <a href="https://www.linkedin.com/in/wishwa-subhasingha-2404051b5/" target="_blank" rel="noopener noreferrer">
-                            <img id="side-bar-buttons-linkedin" src={isHoveredlinkedin ? linkedinhover : linkedin} alt="linked-in"/>
+                        <a href="https://www.kaggle.com/code/wishwafr/bella-beat-case-study" target="_blank" rel="noopener noreferrer">
+                            <div id="side-bar-buttons-kaggle-p1"  alt="linked-in"> </div>
                         </a>
                       </div>
 
-                      <div
-                          className="image-container"
-                              onMouseEnter={() => setIsHoveredinsta(true)}
-                              onMouseLeave={() => setIsHoveredinsta(false)} 
-                          >
-                            <a href="https://www.instagram.com/_wishwa_/" target="_blank" rel="noopener noreferrer">
-                                <img id="side-bar-buttons-insta" src={isHoveredinsta ? instahover : insta} alt="linked-in"/>
-                            </a>
-                      </div>
+                      
                   </div>
                 </div>
                 <div id="featured-p2-image">
-                  <img id="data-chart" src={data_chart} alt="data_chart" />
+                  <img id="data-chart" src={samproj2} alt="data_chart" />
+                  <div id="data-chart-background"></div>
                 </div>
               </div>
 
@@ -437,16 +428,31 @@ function App() {
                 </div>
 
                 
-                <div id="project-grid">
-                  
-                  <div className="grid-item">
+                <div className="project-grid">
+                
+                  <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={() => (window.open('https://github.com/Wishwa-code/easychannel'))}
+                  >
                     <div className='logo-bar'>
                       <div className='first-icon'>
 
                       </div>
-                      <div className='second-logo'></div>
+                      <div 
+                      className='second-logo'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://github.com/Wishwa-code/easychannel')
+                        }}>
+                        <div id='first-tab-logo'>
+                        </div>
+                      </div>
                     </div>
-                    <div className='grid-item-title'>EasyChannel</div>
+
+                    <div className='grid-item-title' id='title-grid-1'>EasyChannel</div>
                     <div className='grid-item-body'>A mobile application for private medical institutes to manage appointments powered by ML model to preedict session time durations.</div>
                     <div className='grid-item-tool-list'>
                       <div className='grid-item-tool-list-item'>react</div>
@@ -455,43 +461,136 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
+                  <div 
+                    className="grid-item"
+                    style={{
+                      cursor:'pointer'
+                    }}
+                    onClick={ () => (window.open('https://github.com/Wishwa-code/CS50-Project-Books'))}
+                    >
+                    <div className='logo-bar'>
+                      <div className='first-icon'>
+
+                      </div>
+                      <div 
+                      className='second-logo'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://github.com/Wishwa-code/CS50-Project-Books')
+                        }}>
+                        <div id='second-tab-logo'>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>Book Review Website</div>
+                    <div className='grid-item-body'>A online library created with Bookreads API to get details of any book using ISBN number and review.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Flask</div>
+                      <div className='grid-item-tool-list-item'>MySQL</div>
+                      <div className='grid-item-tool-list-item'>SCSS</div>
+                    </div>
                   </div>
 
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
+                  <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://github.com/Wishwa-code/Saviya-React-Native_Firebase'))}
+                  >
+                   
+
+                    <div className='logo-bar'>
+                      <div className='first-icon-idea'>
+
+                      </div>
+                       <div className='card-right-side-buttons-some'>
+                        <div 
+                        className='second-logo'
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open('https://github.com/Wishwa-code/Saviya-React-Native_Firebase')
+                        }}
+                        >
+                          <div id='first-tab-logo'>
+
+                          </div>
+                        </div>
+
+                        
+                        <div
+                        className='third-logo'
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open('https://www.figma.com/proto/6TJckonwiiklrVYy5d1L97/SAVIYA?node-id=1-7&scaling=min-zoom')
+                        }}
+                        >
+                          
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className='grid-item-title' id='title-grid-1'>Saviya</div>
+                    <div className='grid-item-body'>
+A marketplace for sri lankan rural crafters to showcase their products.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>React-native</div>
+                      <div className='grid-item-tool-list-item'>Firebase</div>
+                      <div className='grid-item-tool-list-item'>AWS</div>
+                    </div>
                   </div>
 
                 </div>
 
                 <div id="project-grid-switch" style={{ display: isVisible ? 'grid' : 'none' }}>
                   
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
+                 <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://github.com/Wishwa-code/BIS_D-D'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon'>
 
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
+                      </div>
+                      <div 
+                      className='second-logo'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://github.com/Wishwa-code/BIS_D-D')
+                      }}
+                      >
+                        <div id='first-tab-logo'>
 
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>DistantClass.lk</div>
+                    <div className='grid-item-body'>A web application to display to display details of online tutors.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>React-native</div>
+                      <div className='grid-item-tool-list-item'>Firebase</div>
+                      <div className='grid-item-tool-list-item'>AWS</div>
+                    </div>
+                  </div> 
+
 
                  
                 </div> 
 
                 <div id="switch-button-section">  
                   <button className='email-link' id="display-button" onClick={handleDisplayToggle}>  
-                      {isVisible ? 'Hide' : 'Show'} Project Grid  
+                     Show {isVisible ? 'Less' : 'More'} 
                   </button>  
                 </div> 
 
 
               </div>
+ 
 
-              
               <div id="business-projects">
                 <div id="coding-projects-header">
                   <p>Business Projects</p>
@@ -500,40 +599,177 @@ function App() {
                 
                 <div className="project-grid">
                   
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
+                  
+                  <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://drive.google.com/file/d/1ylaKhr15ClrP8cjJGNKhMrIZ-pSpI4VZ/view'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon-idea'>
 
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
+                      </div>
+                      
+                        <div 
+                        className='second-logo'
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open('https://drive.google.com/file/d/1ylaKhr15ClrP8cjJGNKhMrIZ-pSpI4VZ/view')
+                        }}
+                        >
+                          <div id='first-tab-down'>
 
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
+                          </div>
+                        </div>
+
+                        
+                      
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>Freecycle</div>
+                    <div className='grid-item-body'>
+Presented business model for non-profit website dedicated to find a second home for household furniture's.
+                    </div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Strategic managment of business information systems.</div>
+                      
+                    </div>
+                  </div> 
+
+                   <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://drive.google.com/file/d/1ZTMoJrN6dimJk6cYrqa1AmCINIQtBitc/view'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon-idea'>
+
+                      </div>
+                       <div className='card-right-side-buttons-some'>
+                        <div 
+                        className='second-logo'
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open('https://drive.google.com/file/d/1ZTMoJrN6dimJk6cYrqa1AmCINIQtBitc/view')
+                        }}
+                        >
+                          <div id='first-tab-down'>
+
+                          </div>
+                        </div>
+
+                        <div
+                        className='second-logo'
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open('https://drive.google.com/file/d/1NbnvpKVn0Rgo6DCRb6TBRUqIpC81Icgd/view')
+                        }}
+                        >
+                         <div id='first-tab-down'>
+                          </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>HelloFresh</div>
+                    <div className='grid-item-body'>
+Farm-to-market food delivery concept to reduce waste and stabilize prices using predictive analytics.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Information driven entrepreneurship and enterprise.</div>
+                    </div>
+                  </div> 
+                  
+                   <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://sites.google.com/iit.ac.lk/pissukanna/home?authuser=0'))}
+                  >
+                    
+
+                    <div className='logo-bar'>
+                      <div className='first-icon-idea'>
+
+                      </div>
+                       <div className='card-right-side-buttons-some'>
+                        <div 
+                        className='second-logo'
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open('https://drive.google.com/file/d/1H1CRw9s847jWNoaTJw0AoX_of4yypQVK/view')
+                        }}
+                        >
+                          <div id='first-tab-down'>
+
+                          </div>
+                        </div>
+
+                        <div
+                        className='third-logo'
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open('https://sites.google.com/iit.ac.lk/pissukanna/home?authuser=0')
+                        }}
+                        >
+                          
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className='grid-item-title' id='title-grid-1'>PissuKanna microsite</div>
+                    <div className='grid-item-body'>
+A SEO optimized microsite to promote a sri lankan celebrity and monitor web trafiic using google analytics.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Digital marketing and web analytics</div>
+                    </div>
+                  </div> 
+
+                  
                   
                 </div>
 
                 <div id="business-grid-switch" style={{ display: isBizvisible ? 'grid' : 'none' }}>
                   
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
+                  <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://drive.google.com/file/d/1ZsgkueOVUQs4Ouh57g664gNgQACWhH5O/view'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon'>
 
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
+                      </div>
+                      <div 
+                      className='second-logo'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://drive.google.com/file/d/1ZsgkueOVUQs4Ouh57g664gNgQACWhH5O/view')
+                      }}
+                      >
+                        <div id='first-tab-down'>
 
-                  <div className="grid-item">
-                    <p>this is just a one grid</p>
-                  </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>MongoDB Research Poster</div>
+                    <div className='grid-item-body'>
+How is MongoDB used for Big Data and what are the associated data governance and data quality issues</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Big Data Analytics</div>
+              
+                    </div>
+                  </div>  
 
-                  
                 </div> 
 
                 <div id="b-switch-button-section">  
                   <button className='email-link' id="display-button" onClick={handlebusinessDisplayToggle}>  
-                      {isBizvisible ? 'Hide' : 'Show'} Project Grid  
+                      Show {isBizvisible ? 'Less' : 'More'}   
                   </button>  
                 </div> 
 
@@ -557,8 +793,15 @@ function App() {
               </div>
               <div className='style-button-container'>
                 
-                <a class="email-link" href="mailto:brittany.chiang@gmail.com" rel="noopener noreferrer" target="_blank">Say Hello</a>
+    
+                <a href="https://wa.me/94771631976?text=Hello%20from%20my%20website!" target="_blank" className='email-link-wp'>
                 
+                <div id="whatapp-icon">
+
+                </div>
+                Say hello
+                
+                </a>
                 
               </div>
 

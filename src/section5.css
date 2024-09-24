@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   font-size: 34px;
+  height:25px;
 }
 
 #coding-projects{
@@ -23,12 +24,15 @@
 #coding-projects-header{
   font-size: 17px;
   color: #ffe400;
+  margin-bottom:20px;
+  padding:0;
+  margin-bottom: 40px;
 }
 
 #project-grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:20px;
+  gap:10px;
   width:100%;
   justify-items: center;
 }
@@ -37,7 +41,7 @@
   color:white;
   padding:30px;
   height:240px;
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   width:250px;
@@ -68,13 +72,78 @@
   background-position: center;
   background-size: contain;
 }
-.second-logo{
-  height:20px;
-  width:20px;
-  background-image: url('images/link.png');
+
+.first-icon-idea{
+  height:50px;
+  width:50px;
+  background-image: url('images/projectidea.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.card-right-side-buttons-some{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height:60px;
+  width:50px;
+  gap:12px;
+}
+#first-tab-logo{
+  height:20px;
+  width:20px;
+  background-image: url('images/github.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: transform;
+}
+#first-tab-logo:hover{
+  background-image: url('images/githubhover.png')
+}
+
+#second-tab-logo {
+  height: 20px;
+  width:20px;
+  background-image: url('images/github.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: transform;
+}
+
+#second-tab-logo:hover{
+  background-image: url('images/githubhover.png');
+}
+
+#first-tab-down {
+  height:20px;
+  width:20px;
+  background-image: url('images/down.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: transform;
+}
+.third-logo{
+  height: 18px;
+  width:18px;
+  background-image: url('images/link.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:contain;
+  transition:transform;
+}
+
+.third-logo:hover {
+  background-image: url('images/linkhover.png')
+}
+
+#first-tab-down:hover{
+  background-image: url('images/downhover.png');
+}
+#title-grid-1:hover{
+  color:#ffe400;
 }
 
 .grid-item-title{
@@ -86,6 +155,7 @@
   font-weight:600;
   font-size:22px;
   color:#ccd6f6;
+  text-align: left;
 }
 
 .grid-item-body{
@@ -113,43 +183,65 @@
 
 .grid-item-tool-list-item{
   padding-right: 10px;
+  align-items:left;
+  text-align:left;
+  line-height: 18px;
 }
 #project-grid-switch{
   margin-top: 20px;
   grid-template-columns: repeat(3, 1fr);
   gap:10px;
-  width:100%;
+  width:970px;
 }
 
 #switch-button-section{
   margin-top: 50px;
+  margin-bottom: 60px;
 }
 
 #business-projects{
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 #coding-projects-header{
   font-size: 17px;
   color: #ffe400;
+  height:40px;
+  margin-top:40px;
+  margin-bottom:40px;
+  border-bottom: 1px solid #8891b0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width:200px;
 }
 
 .project-grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:10px;
-  width:100%;
+  width:970px;
+
 }
 
 #business-grid-switch{
   margin-top: 20px;
   grid-template-columns: repeat(3, 1fr);
   gap:10px;
-  width:100%;
+  width:970px;
 }
 
 #b-switch-button-section{
   margin-top: 50px;
+}
+#projects-section-divider{
+  color:white;
+  height: 1px;
+  width:100%;
+  background-color: #8891b0;
+  margin-top: 90px;
 }
