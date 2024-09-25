@@ -1,45 +1,130 @@
-#header {
-  position: fixed;         /* Make it sticky */
-  top: 0;                  /* Stick it to the top */
-  left: 0;
-  right:0px;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  transition: top 0.3s;     /* Smooth transition */
-  z-index: 1000; 
-  height:80px;
-  background-color: #0b0c10;
-  padding-bottom:20px;
-}
-/* Hide the header initially (when scrolling down) */
-#header.hidden {
-  top: -120px;              /* Move it off the screen when hidden */
-}
-/* Style for the left side (logo) */
-#left-side-nav p {
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-}
-#left-side-nav {
-    dispaly:flex;
-    flex-direction: row;
-    width:300px;
-    padding-left: 10px;
-    height:100%;
-    /*background-color: burlywood;*/
-}
-#right-side-nav{
-    display:flex;
-    flex-direction: row;
-    padding-top: 20px;
-    padding-right:60px;
-  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b0c10;
+    padding-top:10px;
+    position: fixed;  /* Fix the navbar at the top */
+    width: 100vw;
+    top: 0;
+    transition: transform 0.3s ease-in-out;  /* Smooth transition */
+    z-index: 1000; /* Ensure navbar is on top */
+
 }
 
+.navbar.hidden {
+    transform: translateY(-100%);  /* Hide the navbar by moving it upwards */
+}
+
+.navbar.visible {
+    transform: translateY(0);  /* Show the navbar */
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left:40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 70px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0px;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    width:40px;
+    height: 40px;
+    margin-right: 14px;
+    transition: transform 0.3s ease;
+}
+.menu-toggle.default {
+  background-image: url('images/menu.png'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height:40px;
+  width:40px;
+  transform: rotate(0deg);
+
+  /* Default image */
+}
+
+.menu-toggle.toggled {
+  background-image: url('images/close.png'); 
+  height:40px;
+  width:40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(180deg);
+  transition: transform 0.3 ease;
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#8891b0 ;
+    margin-top:0px;
+    align-items: center;
+    position: fixed;  /* Fix the navbar at the top */
+    width: 80vw;
+    left:20vw;
+    top: 0;
+    transition: transform 0.3s ease-in-out;  
+    padding-bottom: 10px;
+
+}
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        position: absolute;
+        top: 50px; /* Adjust based on your navbar height */
+        background-color: #333;
+        width: 100%;
+        padding: 0px 0;
+        height:100vh;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show on toggle */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the toggle button */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
 .inner-tab{
     padding-left:22px;
     display: flex;
@@ -88,19 +173,4 @@
 }
 .inner-tab-text:hover{
   color: #ffe400;
-}
-/* Style for the right side (navigation links) */
-@media (max-width: 768px) {
-  #right-side-nav{
-    display: flex;
-    flex-direction: column;
-  }
-  #right-side-nav ul {
-    flex-direction: column;    
-    align-items: center;      
-  }
-  #right-side-nav li {
-    margin-left: 0;            
-    margin-top: 10px;          
-  }
 }

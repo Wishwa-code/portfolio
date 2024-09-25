@@ -1,13 +1,14 @@
 import './App.css';
-import './navbar.css'
+import './Navbar.css'
 import './section1.css'
 import './section2.css'
 import './section3.css'
 import './section5.css'
 import './section4.css'
 import './section6.css'
+import Navbar from './Navbar';
 import {BIS, GDA} from './edu.js'
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Spline from '@splinetool/react-spline';
 import myphoto from './images/me.jpeg';
 import linkedin from './images/linkedin.png';
@@ -22,6 +23,7 @@ import samproj1 from './images/samproj1img.png';
 import samproj2 from './images/samproj2img.png'
 
 
+
 function App() {
 
   const [eduview, setEduview ] = useState('title1');
@@ -33,6 +35,8 @@ function App() {
   const section4Ref = useRef(null);
   const section5Ref = useRef(null);
   const [barPosition, setBarPosition] = useState('');
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const [activeTab, setActiveTab] = useState(0);
 
@@ -84,6 +88,46 @@ function App() {
     setIsBizvisible(!isBizvisible);
   }
 
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navLinksRef = useRef(null);
+    const [isToggled, setIsToggled] = useState(false);
+
+  // Toggle the menu and switch background image
+
+
+    const toggleMenu = () => {
+        setIsMenuOpen(prevState => !prevState);
+        setIsToggled(!isToggled);
+
+        // Safely toggle the 'active' class on the nav-links
+        if (navLinksRef.current) {
+            navLinksRef.current.classList.toggle('active');
+        }
+    };
+
+     const controlNavbar = () => {
+        if (typeof window !== 'undefined') {
+            if (window.scrollY > lastScrollY) {
+                // Scrolling down
+                setIsNavbarVisible(false);
+            } else {
+                // Scrolling up
+                setIsNavbarVisible(true);
+            }
+            setLastScrollY(window.scrollY);
+        }
+    };
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', controlNavbar);
+
+            return () => {
+                window.removeEventListener('scroll', controlNavbar);
+            };
+        }
+    }, [lastScrollY]);
+
   return (
     <div className="App">
         <div id="vertical-button-right">
@@ -134,51 +178,49 @@ function App() {
 
         </div>
         <div id="header">
-          <div id="left-side-nav">
-            <Spline
-              scene="https://prod.spline.design/HaRl7e8cAP2nJbBy/scene.splinecode" 
-              width={200}
-              height={80}
-            />
-          </div>
-          <div id="right-side-nav">
-
-              <div className="inner-tab">
-                <button className="inner-tab-button-01" onClick={() => scrollToSection(section2Ref)}>
-                  <div className="inner-tab-no">01. </div>
-                  <div className="inner-tab-text">About</div>
-                </button>
-              </div>
-
-              <div className="inner-tab">
-                <button className="inner-tab-button-01" onClick={() => scrollToSection(section3Ref)}>
+          <nav className={`navbar ${isNavbarVisible ? 'visible' : 'hidden'}`}>
+            <div className="logo">W</div>
+            <ul className="nav-links" ref={navLinksRef}>
+                <li>
+                    <button className="inner-tab-button-01" onClick={() => scrollToSection(section2Ref)}>
+                        <div className="inner-tab-no">01. </div>
+                        <div className="inner-tab-text">About</div>
+                    </button>   
+                </li>
+                <li>
+                  <button className="inner-tab-button-01" onClick={() => scrollToSection(section3Ref)}>
                   <div className="inner-tab-no"> 02.</div>
                   <div className="inner-tab-text">Experience</div>
                 </button>
-              </div>
 
-              <div className="inner-tab">
-                <button className="inner-tab-button-01" onClick={() => scrollToSection(section4Ref)}>
+                </li>
+                <li>
+                   <button className="inner-tab-button-01" onClick={() => scrollToSection(section4Ref)}>
                   <div className="inner-tab-no"> 03.</div>
                   <div className="inner-tab-text">Work</div>
                 </button>
-              </div>
-
-              <div className="inner-tab">
-                <button className="inner-tab-button-01" onClick={() => scrollToSection(section5Ref)} >
-                  <div className="inner-tab-no">04.</div>
-                  <div className="inner-tab-text">Contact</div>
+                </li>
+                <li>
+                   
+                  <button className="inner-tab-button-01" onClick={() => scrollToSection(section5Ref)} >
+                    <div className="inner-tab-no">04.</div>
+                    <div className="inner-tab-text">Contact</div>
                 </button>
-              </div>
-
-              <div className="inner-tab">
-                <button className="email-link-top" onClick={()=> (window.open('https://drive.google.com/file/d/1JbRp0fxRKmOd04rKPwStGvvNB9S5tFpZ/view?usp=sharing'))}>
-                  <div className="inner-tab-no-resume"></div>
-                  <div className="inner-tab-text-resume">Resume</div>
-                </button>
-              </div>
-
-          </div>
+                </li>
+                <li>
+                  <button className="email-link-top" onClick={()=> (window.open('https://drive.google.com/file/d/1JbRp0fxRKmOd04rKPwStGvvNB9S5tFpZ/view?usp=sharing'))}>
+                    <div className="inner-tab-no-resume"></div>
+                    <div className="inner-tab-text-resume">Resume</div>
+                  </button>
+                </li>
+            </ul>
+            <div
+              className={`menu-toggle ${isToggled ? 'toggled' : 'default'}`}
+              onClick={toggleMenu}
+            >
+      
+            </div>
+        </nav>
         </div>
         <div id="body">
           <div id="inner-body">

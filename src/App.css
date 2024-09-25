@@ -38,7 +38,7 @@
 .App {
   text-align: center;
   display:flex;
-  flex-direction: coloumn;
+  flex-direction: column;
   overflow-x: hidden;
   background-color: #0b0c10;
 }
