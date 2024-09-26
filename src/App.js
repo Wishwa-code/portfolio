@@ -8,6 +8,7 @@ import './section5.css'
 import './section4.css'
 import './section6.css'
 import Navbar from './Navbar';
+import {UOW, Google, WPP, EJP } from './certificates.js'
 import {BIS, GDA} from './edu.js'
 import { useState, useRef, useEffect } from 'react';
 import Spline from '@splinetool/react-spline';
@@ -136,11 +137,12 @@ function App() {
   const cardWidth = useRef(0);
 
   const cards = [
-    <div>card 1</div>,
-    <div>card 2</div>,
-    <div>card 3</div>
+    <UOW/>,
+    <Google/>,
+    <WPP/>,
+    <EJP/>
   ];
-  const cardColors = ['#1f2833', '#1f2833', '#1f2833'];
+  const cardColors = ['#1f2833', '#1f2833', '#1f2833','#1f2833'];
 
   useEffect(() => {
     // Calculate card width when the component mounts or window resizes

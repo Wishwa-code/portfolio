@@ -25,11 +25,12 @@
 }
 
 .card {
-  width: 600px;
-  height: 400px;
+  display: flex;
+  width:600px;
+  height: 500px;
   margin: 0 10px;
   background-color: #fff;
-  border-radius: 40px;
+  border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
