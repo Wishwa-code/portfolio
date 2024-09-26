@@ -1,0 +1,96 @@
+#section-2-1{
+    height:600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.slider-container {
+  width: 1000px;
+  height:100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.card-list {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  position: relative;
+  margin-left: 200px;
+}
+
+.card {
+  width: 600px;
+  height: 400px;
+  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  text-align: center;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 0.5;
+  transform: scale(0.8);
+}
+
+/* Active card in the center */
+.card.active {
+  opacity: 1;
+  transform: scale(1.1); /* Make the active card bigger */
+  z-index: 10; /* Ensure the active card appears on top */
+}
+
+/* Previous card (smaller, left) */
+.card.previous {
+  transform: translateX(-180%) scale(0.8); /* Shift left and reduce size */
+  opacity: 0.3; /* Reduce opacity */
+  z-index: 5; /* Lower stacking order than active */
+}
+
+/* Next card (smaller, right) */
+.card.next {
+  transform: translateX(180%) scale(0.8); /* Shift right and reduce size */
+  opacity: 0.3; /* Reduce opacity */
+  z-index: 5; /* Lower stacking order than active */
+}
+
+/* Previous/Next buttons */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(204, 214, 246, 0.5);
+  color: #ffe400;
+  border: none;
+  font-size: 36px;
+  padding-bottom: 6px;
+  border-radius: 40%;
+  cursor: pointer;
+  z-index: 15;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.prev-btn:disabled, .next-btn:disabled {
+  background-color: rgba(11, 12, 16, 0.2);
+  cursor: not-allowed;
+}

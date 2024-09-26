@@ -2,6 +2,7 @@ import './App.css';
 import './Navbar.css'
 import './section1.css'
 import './section2.css'
+import './section2-5.css'
 import './section3.css'
 import './section5.css'
 import './section4.css'
@@ -127,6 +128,83 @@ function App() {
             };
         }
     }, [lastScrollY]);
+
+   const [currentIndex, setCurrentIndex] = useState(0);
+  const cardListRef = useRef(null);
+  const startX = useRef(0);
+  const isDragging = useRef(false);
+  const cardWidth = useRef(0);
+
+  const cards = [
+    <div>card 1</div>,
+    <div>card 2</div>,
+    <div>card 3</div>
+  ];
+  const cardColors = ['#1f2833', '#1f2833', '#1f2833'];
+
+  useEffect(() => {
+    // Calculate card width when the component mounts or window resizes
+    cardWidth.current = cardListRef.current.children[0].offsetWidth + 20;
+    const handleResize = () => {
+      cardWidth.current = cardListRef.current.children[0].offsetWidth + 20;
+      updateCardPosition();
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const updateCardPosition = () => {
+    cardListRef.current.style.transform = `translateX(-${currentIndex * cardWidth.current}px)`;
+  };
+
+  const handleSwipeStart = (e) => {
+    startX.current = e.touches[0].clientX;
+    isDragging.current = true;
+  };
+
+  const handleSwipeMove = (e) => {
+    if (!isDragging.current) return;
+    const currentX = e.touches[0].clientX;
+    const diffX = startX.current - currentX;
+    cardListRef.current.style.transform = `translateX(-${(currentIndex * cardWidth.current) + diffX}px)`;
+  };
+
+  const handleSwipeEnd = (e) => {
+    if (!isDragging.current) return;
+    const endX = e.changedTouches[0].clientX;
+    const diffX = startX.current - endX;
+    isDragging.current = false;
+
+    // Move to the next card if swipe is more than 50px
+    if (diffX > 50 && currentIndex < cardListRef.current.children.length - 1) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
+    // Move to the previous card if swipe is more than -50px
+    if (diffX < -50 && currentIndex > 0) {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    }
+
+    // Smoothly update card position after swiping
+    updateCardPosition();
+  };
+
+  // Handle next button click
+  const handleNext = () => {
+    if (currentIndex < cardListRef.current.children.length - 1) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
+  };
+
+  // Handle previous button click
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    }
+  };
+
+  useEffect(() => {
+    updateCardPosition();
+  }, [currentIndex]);
 
   return (
     <div className="App">
@@ -337,6 +415,50 @@ function App() {
                    </div> 
                     
                 </div>
+              </div>
+            </div>
+            <div id='section-2-1' >
+              <div className="slider-container">
+                {/* Previous Button */}
+                <button 
+                  className="prev-btn" 
+                  onClick={handlePrev} 
+                  disabled={currentIndex === 0}
+                >
+                  &#8249;
+                </button>
+
+                <div
+                  className="card-list"
+                  ref={cardListRef}
+                  onTouchStart={handleSwipeStart}
+                  onTouchMove={handleSwipeMove}
+                  onTouchEnd={handleSwipeEnd}
+                >
+                  {cards.map((card, index) => (
+                    <div
+                      key={index}
+                      className={`
+                        card 
+                        ${currentIndex === index ? 'active' : ''} 
+                        ${currentIndex === index - 1 ? 'previous' : ''} 
+                        ${currentIndex === index + 1 ? 'next' : ''}
+                      `}
+                      style={{ backgroundColor: cardColors[index] }}
+                    >
+                      {card}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Next Button */}
+                <button 
+                  className="next-btn" 
+                  onClick={handleNext} 
+                  disabled={currentIndex === cardListRef.current?.children.length - 1}
+                >
+                  &#8250;
+                </button>
               </div>
             </div>
 
