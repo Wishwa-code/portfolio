@@ -130,17 +130,17 @@ function App() {
         }
     }, [lastScrollY]);
 
-   const [currentIndex, setCurrentIndex] = useState(0);
+   const [currentIndex, setCurrentIndex] = useState(3);
   const cardListRef = useRef(null);
   const startX = useRef(0);
   const isDragging = useRef(false);
   const cardWidth = useRef(0);
 
   const cards = [
-    <UOW/>,
-    <Google/>,
+    <EJP/>,
     <WPP/>,
-    <EJP/>
+    <Google/>,
+    <UOW/>
   ];
   const cardColors = ['#1f2833', '#1f2833', '#1f2833','#1f2833'];
 
@@ -217,7 +217,7 @@ function App() {
             </div>
           </div>
           <div id="vertical-text-wrapper">
-              <button onClick={sendEmail} id="vertical-text">vishvajayanath@gmail.com</button>
+              <button onClick={sendEmail} id="vertical-text">wishwajayanath@gmail.com</button>
           </div> 
         </div>
         <div id="vertical-button-left">
@@ -420,14 +420,17 @@ function App() {
               </div>
             </div>
             <div id='section-2-1' >
+                <div id="coding-projects-header">
+                  <p>Education</p>
+                </div> 
               <div className="slider-container">
                 {/* Previous Button */}
                 <button 
-                  className="prev-btn" 
+                  className="next-btn" 
                   onClick={handlePrev} 
                   disabled={currentIndex === 0}
                 >
-                  &#8249;
+                  &#8250;
                 </button>
 
                 <div
@@ -455,11 +458,11 @@ function App() {
 
                 {/* Next Button */}
                 <button 
-                  className="next-btn" 
+                  className="prev-btn" 
                   onClick={handleNext} 
                   disabled={currentIndex === cardListRef.current?.children.length - 1}
                 >
-                  &#8250;
+                  &#8249;
                 </button>
               </div>
             </div>
@@ -980,7 +983,7 @@ How is MongoDB used for Big Data and what are the associated data governance and
                 <div id="section-6-header-text"> What's next</div>
               </div>
               <div id="section-6-topic"> Get In Touch</div>
-              <div id="section-6-body"> Currently i am looking for fullstack web developer vacancy. Please feel free to reach out to me if you have a question or just want to say hi, I'll get back tp you as soon as possible.<br></br> Thankyou!
+              <div id="section-6-body"> Currently i am looking for fullstack web developer vacancy. Please feel free to reach out to me if you have a question or just want to say hi, I'll get back to you as soon as possible.<br></br> Thankyou!
               </div>
               <div className='style-button-container'>
                 

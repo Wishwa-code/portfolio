@@ -26,7 +26,7 @@ export function UOW() {
 
            
             <div className="items-body-cert-text">
-                        The program is designed to equip students with the skills and knowledge to develop, implement, and manage information systems within a business context.
+                        BSc (Hons) Business Information Systems, Univeristy of Westminster, UK (Upper Second Class Honours). My disseratation was on developing a prediction system to identify the market potential of sri lankan export products in different markets across the globe using historical data.
             </div>
 
             <a href="https://www.google.lk">
@@ -40,6 +40,11 @@ export function UOW() {
                             <div className='left-list-name-cert'>Information Technology Security</div>
                             </div>
 
+                                <div className='left-list-item-cert'> 
+                            <div className='left-list-icon-cert'></div>
+                            <div className='left-list-name-cert'>  BIS Design and Architecture</div>
+                            </div>
+
                             <div className='left-list-item-cert'>
                             <div className='left-list-icon-cert'></div>
                             <div className='left-list-name-cert'>  Server-side Web Development</div>
@@ -49,6 +54,22 @@ export function UOW() {
                             <div className='left-list-icon-cert'></div>
                             <div className='left-list-name-cert'>  Big Data Analytics</div>
                             </div>
+
+                            <div className='left-list-item-cert'> 
+                            <div className='left-list-icon-cert'></div>
+                            <div className='left-list-name-cert'>  Digital marketing and Web Analytics</div>
+                            </div>
+
+                                <div className='left-list-item-cert'> 
+                            <div className='left-list-icon-cert'></div>
+                            <div className='left-list-name-cert'>  Information Driven Entrepreneurship</div>
+                            </div>
+
+                                <div className='left-list-item-cert'> 
+                            <div className='left-list-icon-cert'></div>
+                            <div className='left-list-name-cert'>  Strategic Management of Information systems</div>
+                            </div>
+                            
                     </div>
                     
                 </div>
@@ -67,7 +88,7 @@ export function Google() {
         <div id="UOW-card" >
             <div className="cert-header-row">
                 <div className="main-title-cert">
-                    Business Information Systems
+                    Google Data Analytics Certificate
                 </div>
              
                 <div className="location-icon-cert">
@@ -75,7 +96,7 @@ export function Google() {
                 </div>
                 <a href="https://www.google.lk">
                 <div className="location-name-cert">
-                  UOW
+                  Coursera
                 </div>
                 </a>
             </div>
@@ -84,7 +105,7 @@ export function Google() {
 
            
             <div className="items-body-cert-text">
-                        The program is designed to equip students with the skills and knowledge to develop, implement, and manage information systems within a business context.
+                        Learned the industry standard procedure to identify a business problem and finding insights to solve identified problem. Including complete process from creating effective questionnares to gather data, storing data safely, analysing data and visualizing the findings. Completed capstone project using bellabeat dataset to earn the final certificate.
             </div>
 
             <a href="https://www.google.lk">
@@ -95,18 +116,25 @@ export function Google() {
 
                         <div className='left-list-item-cert'>
                             <div className='left-list-icon-cert'></div>
-                            <div className='left-list-name-cert'>Information Technology Security</div>
+                            <div className='left-list-name-cert'>Dashboarding and Reporting</div>
                             </div>
 
                             <div className='left-list-item-cert'>
                             <div className='left-list-icon-cert'></div>
-                            <div className='left-list-name-cert'>  Server-side Web Development</div>
+                            <div className='left-list-name-cert'> Data transformation</div>
                             </div>
 
                             <div className='left-list-item-cert'> 
                             <div className='left-list-icon-cert'></div>
-                            <div className='left-list-name-cert'>  Big Data Analytics</div>
+                            <div className='left-list-name-cert'>  Data Visualization</div>
                             </div>
+
+                            <div className='left-list-item-cert'> 
+                            <div className='left-list-icon-cert'></div>
+                            <div className='left-list-name-cert'>  Google BigQuery</div>
+                            </div>
+
+                            
                     </div>
                     
                 </div>
@@ -125,7 +153,7 @@ export function WPP() {
         <div id="UOW-card" >
             <div className="cert-header-row">
                 <div className="main-title-cert">
-                    Business Information Systems
+                    CS50 Web Programming
                 </div>
              
                 <div className="location-icon-cert">
@@ -133,7 +161,7 @@ export function WPP() {
                 </div>
                 <a href="https://www.google.lk">
                 <div className="location-name-cert">
-                  UOW
+                  Edx
                 </div>
                 </a>
             </div>
@@ -142,7 +170,7 @@ export function WPP() {
 
            
             <div className="items-body-cert-text">
-                        The program is designed to equip students with the skills and knowledge to develop, implement, and manage information systems within a business context.
+                This module is offered by university of harvard for computer science students and any outside student as OpenCourseWare. All the projects were marked by harvard professors. Completed 5 challenging projects using django framework while learning extensive features provided by DJANGO framework.
             </div>
 
             <a href="https://www.google.lk">
@@ -153,18 +181,29 @@ export function WPP() {
 
                         <div className='left-list-item-cert'>
                             <div className='left-list-icon-cert'></div>
-                            <div className='left-list-name-cert'>Information Technology Security</div>
+                            <div className='left-list-name-cert'>Django</div>
                             </div>
 
                             <div className='left-list-item-cert'>
                             <div className='left-list-icon-cert'></div>
-                            <div className='left-list-name-cert'>  Server-side Web Development</div>
+                            <div className='left-list-name-cert'>  User Interfaces (React) </div>
                             </div>
 
                             <div className='left-list-item-cert'> 
                             <div className='left-list-icon-cert'></div>
-                            <div className='left-list-name-cert'>  Big Data Analytics</div>
+                            <div className='left-list-name-cert'>  SQL, Models and Migrations</div>
                             </div>
+
+                            <div className='left-list-item-cert'> 
+                            <div className='left-list-icon-cert'></div>
+                            <div className='left-list-name-cert'>  Testing CI/CD</div>
+                            </div>
+
+                            <div className='left-list-item-cert'> 
+                            <div className='left-list-icon-cert'></div>
+                            <div className='left-list-name-cert'>  Scalability and Security</div>
+                            </div>
+                            
                     </div>
                     
                 </div>
@@ -183,7 +222,7 @@ export function EJP() {
         <div id="UOW-card" >
             <div className="cert-header-row">
                 <div className="main-title-cert">
-                    Business Information Systems
+                    Evotech Java Programming
                 </div>
              
                 <div className="location-icon-cert">
@@ -191,7 +230,7 @@ export function EJP() {
                 </div>
                 <a href="https://www.google.lk">
                 <div className="location-name-cert">
-                  UOW
+                  Evotech
                 </div>
                 </a>
             </div>
@@ -200,32 +239,32 @@ export function EJP() {
 
            
             <div className="items-body-cert-text">
-                        The program is designed to equip students with the skills and knowledge to develop, implement, and manage information systems within a business context.
+                        This course is offered by evotech  sri lankan IT institute. Refreshed the fundamental knowledge while learnig java language.
             </div>
 
-            <a href="https://www.google.lk">
-                <div className="cert-image-box">
+            <a className='cert-image-box' href="https://www.google.lk">
+                
                     <div className="cert-back-image"></div>
                     <div className="overlay-on-the-background"></div>
                     <div className='text-on-the-background'>
 
                         <div className='left-list-item-cert'>
                             <div className='left-list-icon-cert'></div>
-                            <div className='left-list-name-cert'>Information Technology Security</div>
+                            <div className='left-list-name-cert'>Programming Fundamentals</div>
                             </div>
 
                             <div className='left-list-item-cert'>
                             <div className='left-list-icon-cert'></div>
-                            <div className='left-list-name-cert'>  Server-side Web Development</div>
+                            <div className='left-list-name-cert'>  Object-oriented Programming</div>
                             </div>
 
                             <div className='left-list-item-cert'> 
                             <div className='left-list-icon-cert'></div>
-                            <div className='left-list-name-cert'>  Big Data Analytics</div>
+                            <div className='left-list-name-cert'>  Algorithmic Thinking</div>
                             </div>
                     </div>
                     
-                </div>
+                
             </a>
 
         </div>
