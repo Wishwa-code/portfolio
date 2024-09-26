@@ -17,7 +17,7 @@ export function BIS() {
         <div id="BIS-inner-tab" ref={bisRef}>
             <div className="first-header-row">
                 <div className="main-title">
-                    Quality Assurance Engineer
+                    Intern QA Engineer
                 </div>
                 <div className="location">
                     <div className="location-icon">
@@ -93,7 +93,7 @@ export function GDA () {
                     &nbsp;@&nbsp;
                     </div>
                     <div className="location-name">
-                    Family pairing association
+                    FPA
                     </div>
                 </div>
             </div>

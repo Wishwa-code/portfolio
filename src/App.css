@@ -41,6 +41,8 @@
   flex-direction: column;
   overflow-x: hidden;
   background-color: #0b0c10;
+
+  
 }
 
 .App-logo {
@@ -297,4 +299,29 @@ iframe[src*="spline.design"] + div {
 
 #highlight-text {
   color:#ffe400
+}
+
+@media (max-width:768px){
+  .App{
+    margin-right: 0px; /*change this in case any mobile size show white spcae in right side*/
+  }
+  #body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #inner-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:90vw;
+
+  }
+  #vertical-button-right{
+    display:none;
+  }
+  #vertical-button-left{
+    display:none;
+  }
 }

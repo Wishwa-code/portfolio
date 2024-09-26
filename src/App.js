@@ -180,35 +180,59 @@ function App() {
         <div id="header">
           <nav className={`navbar ${isNavbarVisible ? 'visible' : 'hidden'}`}>
             <div className="logo">W</div>
+
+
             <ul className="nav-links" ref={navLinksRef}>
                 <li>
-                    <button className="inner-tab-button-01" onClick={() => scrollToSection(section2Ref)}>
+                    <button 
+                      className="inner-tab-button-01" 
+                      onClick={() => {
+                        toggleMenu();
+                        scrollToSection(section2Ref);
+                      }
+                
+                }>
                         <div className="inner-tab-no">01. </div>
                         <div className="inner-tab-text">About</div>
                     </button>   
                 </li>
                 <li>
-                  <button className="inner-tab-button-01" onClick={() => scrollToSection(section3Ref)}>
+                  <button 
+                    className="inner-tab-button-01" 
+                    onClick={() => {
+                      toggleMenu();
+                      scrollToSection(section3Ref);
+                    }
+                }>
                   <div className="inner-tab-no"> 02.</div>
                   <div className="inner-tab-text">Experience</div>
                 </button>
 
                 </li>
                 <li>
-                   <button className="inner-tab-button-01" onClick={() => scrollToSection(section4Ref)}>
+                   <button className="inner-tab-button-01" onClick={() => {
+                    toggleMenu();
+                    scrollToSection(section4Ref);
+                   }}>
                   <div className="inner-tab-no"> 03.</div>
                   <div className="inner-tab-text">Work</div>
                 </button>
                 </li>
                 <li>
                    
-                  <button className="inner-tab-button-01" onClick={() => scrollToSection(section5Ref)} >
+                  <button className="inner-tab-button-01" onClick={() => {
+                    toggleMenu();
+                    scrollToSection(section5Ref);
+                  }} >
                     <div className="inner-tab-no">04.</div>
                     <div className="inner-tab-text">Contact</div>
                 </button>
                 </li>
                 <li>
-                  <button className="email-link-top" onClick={()=> (window.open('https://drive.google.com/file/d/1JbRp0fxRKmOd04rKPwStGvvNB9S5tFpZ/view?usp=sharing'))}>
+                  <button className="email-link-top" onClick={()=> {
+                    toggleMenu();
+                    (window.open('https://drive.google.com/file/d/1JbRp0fxRKmOd04rKPwStGvvNB9S5tFpZ/view?usp=sharing'));
+                  }}>
                     <div className="inner-tab-no-resume"></div>
                     <div className="inner-tab-text-resume">Resume</div>
                   </button>
@@ -336,12 +360,15 @@ function App() {
 
                 <div id="section-3-left-bar" style={{ transform: `translateY(${barPosition}px)` }}>  
                 </div>
+                <div id="section-3-left-bar-mobile" style={{transform:`translateX(${barPosition*2.9}px)`}}>
+                </div>
                 <div id="section-3-buttons">  
                     <button 
                     style={{
                       cursor: 'pointer',
+                      
                       padding: '10px 20px',
-                      marginRight: '10px',
+                      marginRight: '0px',
                       backgroundColor:activeTab === 0 ? 'rgba(255,228,0,0.2)' : '',
                       color: activeTab === 0 ? '#ffe400' : '#8891b0', // Change text color when active
                       fontWeight: activeTab === 0 ? 'bold' : 'normal' // Bold the active tab text
@@ -422,7 +449,7 @@ function App() {
                   <div className="feature-project-heading"> Featured Project</div>
                   <div className="featured-project-heading-2"> Bellabeat Case Study</div>
                   <div className="featured-project-2-info">R notebook created by analyzing publicly available smart device user's data to identify trends that can be used by Bella beat business owners to optimize their marketing strategy.</div>
-                  <div className="tools-list">
+                  <div className="tools-list-2">
                     <div className='tools-list-item-left'>VS code</div>
                     <div className='tools-list-item-left'>Sublime Text</div>
                     <div className='tools-list-item-left'>Atom</div>
@@ -829,9 +856,7 @@ How is MongoDB used for Big Data and what are the associated data governance and
                 <div id="section-6-header-text"> What's next</div>
               </div>
               <div id="section-6-topic"> Get In Touch</div>
-              <div id="section-6-body"> I am actively seeking opportunities to contribute my business information systems knowledge and
-                 am eager to learn and grow alongside your talented team. Please feel free to reach out if you think
-                  I'd be a good fit – I'd love to chat!
+              <div id="section-6-body"> Currently i am looking for fullstack web developer vacancy. Please feel free to reach out to me if you have a question or just want to say hi, I'll get back tp you as soon as possible.<br></br> Thankyou!
               </div>
               <div className='style-button-container'>
                 
@@ -851,6 +876,18 @@ How is MongoDB used for Big Data and what are the associated data governance and
 
 
             <div id="footer-inner">
+              <div id="mobile-footer-logo-list">
+               <div id='fot-git-logo' className='mob-footer-item'>
+                    
+               </div>
+              <div id='fot-insta-logo' className='mob-footer-item'>
+                      
+               </div>
+               <div id='fot-linkedin-logo' className='mob-footer-item'>
+                      
+               </div>
+
+              </div>
               <a href="https://github.com/Wishwa-code/portfolio" target="_blank"><p> Designed & Built by wishwa jayanath</p></a>
             </div>
 
@@ -858,9 +895,7 @@ How is MongoDB used for Big Data and what are the associated data governance and
 
           </div>
         </div>
-        <div id="footer">
-          <p>Designed & Built</p>
-        </div>
+
        
       
     </div>

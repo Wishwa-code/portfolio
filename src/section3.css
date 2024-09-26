@@ -29,6 +29,9 @@
     transition: transform 0.3s;
     margin-right:-1px;
 }
+#section-3-left-bar-mobile{
+    display: none;
+}
 
 #section-3-buttons{
     display: flex;
@@ -37,6 +40,9 @@
     height:100%;
     color: white;
     padding-right: 20px;
+}
+#section-3-buttons button {
+    width:150px;
 }
 
 .edu-left-button{
@@ -61,4 +67,59 @@
 }
 
 #first-highlighted{
+}
+
+@media (max-width:768px){
+    #section-3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        
+    }
+    #section-3-header{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+    }
+    #section-3-inner{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #section-3-buttons{
+        display: flex;
+        flex-direction: row;
+        margin-left:25px;
+        padding-right: 0px;
+        margin-right: -50px;
+        width:300px;
+    }
+    #section-3-buttons button{
+        padding: 0px;
+        margin: 0px;
+        width: 200px;
+    }
+    #section-3-display{
+        display: flex;
+        flex-direction: column;
+
+    }
+    #section-3-left-bar{
+        display: none;
+    }
+    #section-3-left-bar-mobile{
+        display: flex;
+        position:relative;
+        height: 1px;
+        width: 145px;
+        background-color: #ffe400;
+        transition: transform 0.3s;
+        margin-left: 25px;
+        top:49px;
+    }
+    .edu-left-button{
+        border-bottom:1px solid #8891b0;
+        border-left: none;
+    }
 }

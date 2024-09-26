@@ -100,6 +100,13 @@ a {
     position:relative;
     display: inline-block;
 }
+#footer-inner{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 #footer-inner a{
   display: flex;
@@ -141,4 +148,71 @@ a {
     outline: none;
     box-shadow: 4px 4px 0 0 #ffe400;
     transform: translate(-5px, -5px);
+}
+#mobile-footer-logo-list{
+  display:none;
+}
+@media( max-width:768px){
+  #section-6{
+    height:650px;
+    justify-content: center;
+  }
+  #footer-inner{
+    margin-bottom: -5px;
+  }
+  .email-link-wp {
+
+  }
+  #footer-inner a {
+    height:30px;
+    align-items: center;
+  }
+  #section-6-topic{
+    margin-top:20px;
+    font-size: 34px;
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+  }
+  #section-6-body{
+    margin-top: 14px;
+    width:90%;
+    font-size: 15px;
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+  }
+  #mobile-footer-logo-list{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  .mob-footer-item{
+    color:white;
+  }
+  #fot-git-logo{
+    width:20px;
+    height:20px;
+    background-image: url('images/github.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+    #fot-insta-logo{
+    width:20px;
+    height:20px;
+    background-image: url('images/instagram.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+    #fot-linkedin-logo{
+    width:20px;
+    height:20px;
+    background-image: url('images/linkedin.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }

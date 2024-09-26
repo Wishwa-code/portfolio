@@ -245,3 +245,36 @@
   background-color: #8891b0;
   margin-top: 90px;
 }
+@media( max-width:768px){
+  #section-5{
+
+  }
+  #section-5-header{
+
+  }
+  .project-grid{
+    display:grid;
+    grid-template-columns: repeat(1 , 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap:10px;
+    justify-items: center;
+    align-items: center;
+  }
+  #project-grid-switch{
+    margin-top:20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows:repeat(1 ,1fr);
+    justify-items: center;
+    justify-content: center;
+  }
+  #business-grid-switch{
+    margin-top: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1. 1fr);
+    justify-items: center;
+    justify-content: center;
+  }
+  #b-switch-button-section{
+    margin-bottom: 50px;
+  }
+}
