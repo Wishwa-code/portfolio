@@ -578,7 +578,7 @@ function App() {
                 <div id="featured-p2-info">
                   <div className="feature-project-heading"> Featured Project</div>
                   <div className="featured-project-heading-2"> Panthiya</div>
-                  <div className="featured-project-2-info">Online web app developed focusing on facilitating all the IT services for sri lankan private education institutes includeing video conferecing and message channels.</div>
+                  <div className="featured-project-2-info">Online classroom app developed focusing on facilitating all the IT services for sri lankan private education institutes includeing video conferecing and message channels.</div>
                   <div className="tools-list-2">
                     <div className='tools-list-item-left'>VS code</div>
                     <div className='tools-list-item-left'>Sublime Text</div>
