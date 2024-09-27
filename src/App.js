@@ -67,7 +67,7 @@ function App() {
   }
 
   const sendEmail = () => {
-    const email = "vishvajayanath@gmail.com";
+    const email = "Wishwajayanath@gmail.com";
     const subject = "Your Subject";
     const body = "Hello,\n\nThis is the email body.";
     
@@ -178,12 +178,15 @@ function App() {
     isDragging.current = false;
 
     // Move to the next card if swipe is more than 50px
-    if (diffX > 50 && currentIndex < cardListRef.current.children.length - 1) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
+    if (diffX > 50 && currentIndex > 0) {
+      
+      console.log(currentIndex, cardListRef.current.children.length);
+      setCurrentIndex((prevIndex) => prevIndex - 1);
     }
     // Move to the previous card if swipe is more than -50px
-    if (diffX < -50 && currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
+    if (diffX < -50 && currentIndex < 3) {
+      console.log(currentIndex)
+      setCurrentIndex((prevIndex) => prevIndex + 1);
     }
 
     // Smoothly update card position after swiping
@@ -217,7 +220,7 @@ function App() {
             </div>
           </div>
           <div id="vertical-text-wrapper">
-              <button onClick={sendEmail} id="vertical-text">wishwajayanath@gmail.com</button>
+              <button onClick={sendEmail} id="vertical-text">wishwakankanamge@gmail.com</button>
           </div> 
         </div>
         <div id="vertical-button-left">
@@ -333,9 +336,9 @@ function App() {
             <div id="section-1">
 
               <p id="first-line">Hi, my name is</p>
-              <p id="second-line">Wishwa Jayanath. </p>
+              <p id="second-line">Wishwa Kankanamge. </p>
               <p id="third-line">I build things for the web.</p>
-              <p id="fourth-line">I'm a Full stack web developer recently graduted from university of westminster with Upper second Honours award in Business Information Systems. Currently i am seeking for job oppurtunity to work as a <span id="highlight-text">Associate web developer</span>. </p>
+              <p id="fourth-line">I'm a Full stack web developer recently graduted from university of westminster with Upper second Honours award in Business Information Systems. Currently i am seeking a job oppurtunity to work as a <span id="highlight-text">Associate web developer</span>. </p>
                 <button className="email-link-cto" onClick={() => scrollToSection(section4Ref)}>
                   <div className="inner-tab-no-resume"></div>
                   <div className="inner-tab-text-resume">Check out my work!</div>
@@ -361,8 +364,8 @@ function App() {
                     <div id="text-top">
                      
                       <p>Hello! My name is Wishwa and I enjoy creating robust web application to solve complex business problems.</p>
-                      <p> My interest in software development started back in 2006 when i first received computer as a gift. I got a scholarship to enter matara rahula collage from sooriyawewa national school.</p><p> After completing O/L exam with 8-A and 1-B pass i decided enter Business Information System degree program at IIT to learn more about building IT systems  
-</p><p>Fast forward to today, and I've had the priviledge of working at well known  <a href="https://wearedesigners.net/" target="_blank">software development company</a>  where i got the oppurtunity to learn more about mobile and web applications testing.
+                      <p> My interest in software development started back in 2006 when i first received computer as a gift for receiving a scholarship to enter Matara Rahula Collage from Sooriyawewa National School.</p><p> After completing the O/L exam with 8 As and 1 B pass, I decided enter Business Information Systems degree program at IIT to learn more about building IT systems.  
+</p><p>Fast forward to today, and I've had the priviledge of working at well known software development company <a href="https://wearedesigners.net/" target="_blank">We Are Designers</a>  where i got the oppurtunity to learn more about mobile and web applications development and testing.
 </p><p>Here are a few technologies I’ve been working with recently:</p>
                     </div>
                     <div id="text-bottom">
@@ -548,16 +551,16 @@ function App() {
 
               <div id="built-project-1">
                 <div id="featured-p-image">
-                  <img id="data-chart" src={samproj1} alt="data_chart" />
+                  <img id="data-chart" src={samproj2} alt="data_chart" />
                   <div id="data-chart-background"></div>
                 </div>
                 <div id="featured-p-info">
                   <div className="feature-project-heading"> Featured Project</div>
                   <div className="featured-project-heading-2"> Ceylon2World</div>
-                  <div className="featured-project-info">Created a web app to predict export market potential of sri lankan export products using ARIMA model optimized with grid search mechanism combined with Neural Network to calculate residual errors. </div>
+                  <div className="featured-project-info">This is my dissertation project, developed a web app which provides predicted market changes for specific sri lanka export product in specific foreign market. Prediction system is developed using ARIMA model optimized with grid search to deliver predictions with above 85% accuracy.</div>
                   <div className="tools-list">
                     <div className='tools-list-item-right'>Flask</div>
-                    <div className='tools-list-item-right'>Sckit-learn</div>
+                    <div className='tools-list-item-right'>Scikit-learn</div>
                     <div className='tools-list-item-right'>React</div>
                     <div className='tools-list-item-right'>Tailwind CSS</div>
                   </div>
@@ -596,7 +599,7 @@ function App() {
                   </div>
                 </div>
                 <div id="featured-p2-image">
-                  <img id="data-chart" src={samproj2} alt="data_chart" />
+                  <img id="data-chart" src={samproj1} alt="data_chart" />
                   <div id="data-chart-background"></div>
                 </div>
               </div>
@@ -1015,7 +1018,7 @@ How is MongoDB used for Big Data and what are the associated data governance and
                </div>
 
               </div>
-              <a href="https://github.com/Wishwa-code/portfolio" target="_blank"><p> Designed & Built by wishwa jayanath</p></a>
+              <a href="https://github.com/Wishwa-code/portfolio" target="_blank"><p> Designed & Built by Wishwa Kankanamge</p></a>
             </div>
 
 

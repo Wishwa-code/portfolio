@@ -26,7 +26,7 @@ export function UOW() {
 
            
             <div className="items-body-cert-text">
-                        BSc (Hons) Business Information Systems, Univeristy of Westminster, UK (Upper Second Class Honours). My disseratation was on developing a prediction system to identify the market potential of sri lankan export products in different markets across the globe using historical data.
+                        BSc (Hons) Business Information Systems, Univeristy of Westminster, UK (Upper Second Class Honours). My dissertation was on developing a prediction system to identify the market potential of Sri Lankan export producs in different markets across the globe, using historical data. 
             </div>
 
             <a href="https://www.google.lk">
