@@ -234,6 +234,23 @@
   transform: translateY(-4px);
   background-image: url('images/githubhover.png');
 }
+#side-bar-buttons-github-p2{
+  color: #2eac43;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  width: 18px;
+  height:18px;
+  background-image: url('images/github.png') ;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size:contain;
+  margin-top:-20px;
+}
+#side-bar-buttons-github-p2:hover{
+  transform: translateY(-4px);
+  background-image: url('images/githubhover.png');
+}
 
 @media (max-width:768px){
   #section-4{

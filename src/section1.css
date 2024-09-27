@@ -83,7 +83,8 @@
   #second-line{
     padding: 0;
     margin-top: 0px;
-    font-size:34px;
+    font-size:32px;
+    text-wrap: nowrap;
   }
   #third-line{
     font-size:30px;

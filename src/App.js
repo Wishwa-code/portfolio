@@ -21,7 +21,7 @@ import instahover from './images/instahover.png';
 import linkedinhover from './images/linkedinhover.png';
 import data_chart from './images/datachart.png';
 import bullet from './images/play.png';
-import samproj1 from './images/samproj1img.png';
+import samproj1 from './images/panthiya.png';
 import samproj2 from './images/samproj2img.png'
 
 
@@ -577,8 +577,8 @@ function App() {
               <div id="build-project-2">
                 <div id="featured-p2-info">
                   <div className="feature-project-heading"> Featured Project</div>
-                  <div className="featured-project-heading-2"> Bellabeat Case Study</div>
-                  <div className="featured-project-2-info">R notebook created by analyzing publicly available smart device user's data to identify trends that can be used by Bella beat business owners to optimize their marketing strategy.</div>
+                  <div className="featured-project-heading-2"> Panthiya</div>
+                  <div className="featured-project-2-info">Online web app developed focusing on facilitating all the IT services for sri lankan private education institutes includeing video conferecing and message channels.</div>
                   <div className="tools-list-2">
                     <div className='tools-list-item-left'>VS code</div>
                     <div className='tools-list-item-left'>Sublime Text</div>
@@ -590,8 +590,8 @@ function App() {
                     <div
                     
                       >
-                        <a href="https://www.kaggle.com/code/wishwafr/bella-beat-case-study" target="_blank" rel="noopener noreferrer">
-                            <div id="side-bar-buttons-kaggle-p1"  alt="linked-in"> </div>
+                        <a href="https://github.com/Wishwa-code/panthiya" target="_blank" rel="noopener noreferrer">
+                            <div id="side-bar-buttons-github-p2"  alt="linked-in"> </div>
                         </a>
                       </div>
 
@@ -654,13 +654,121 @@ function App() {
                     <div className='grid-item-title' id='title-grid-1'>EasyChannel</div>
                     <div className='grid-item-body'>A mobile application for private medical institutes to manage appointments powered by ML model to preedict session time durations.</div>
                     <div className='grid-item-tool-list'>
-                      <div className='grid-item-tool-list-item'>react</div>
-                      <div className='grid-item-tool-list-item'>java</div>
-                      <div className='grid-item-tool-list-item'>python</div>
+                      <div className='grid-item-tool-list-item'>Flutter</div>
+                      <div className='grid-item-tool-list-item'>Firebase</div>
+                      <div className='grid-item-tool-list-item'>Python</div>
+                      <div className='grid-item-tool-list-item'>Sci-kit</div>
                     </div>
                   </div>
 
                   <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://github.com/Wishwa-code/panthiya'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon'>
+
+                      </div>
+                      <div 
+                      className='second-logo'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://github.com/Wishwa-code/panthiya')
+                      }}
+                      >
+                        <div id='first-tab-logo'>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>Online classroom</div>
+                    <div className='grid-item-body'>Online web app developed focusing on facilitating all the IT services for sri lankan private education institutes includeing video conferecing and message channels.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Django</div>
+                      <div className='grid-item-tool-list-item'>React</div>
+                      <div className='grid-item-tool-list-item'>Agora SDK</div>
+                      <div className='grid-item-tool-list-item'>WebRTC</div>
+                    </div>
+                  </div>  
+
+
+                      <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://github.com/me50/wishwa-50'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon'>
+
+                      </div>
+                      <div 
+                      className='second-logo'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://github.com/me50/wishwa-50')
+                      }}
+                      >
+                        <div id='first-tab-logo'>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>Email app</div>
+                    <div className='grid-item-body'>Email client that makes API calls to send and receive email from backend developed using Django restframework.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Django</div>
+                      <div className='grid-item-tool-list-item'>Vanilla JS</div>
+                      <div className='grid-item-tool-list-item'>PostgreSQl</div>
+                    </div>
+                  </div>  
+
+                  
+
+                  
+
+                </div>
+
+                <div id="project-grid-switch" style={{ display: isVisible ? 'grid' : 'none' }}>
+                  
+                 <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://github.com/Wishwa-code/BIS_D-D'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon'>
+
+                      </div>
+                      <div 
+                      className='second-logo'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://github.com/Wishwa-code/BIS_D-D')
+                      }}
+                      >
+                        <div id='first-tab-logo'>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>DistantClass.lk</div>
+                    <div className='grid-item-body'>A web application to display to display details of online tutors.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>PHP</div>
+                      <div className='grid-item-tool-list-item'>MySQL</div>
+                      <div className='grid-item-tool-list-item'>Vanilla JS</div>
+                    </div>
+                  </div>
+
+
+                      <div 
                     className="grid-item"
                     style={{
                       cursor:'pointer'
@@ -688,6 +796,70 @@ function App() {
                       <div className='grid-item-tool-list-item'>Flask</div>
                       <div className='grid-item-tool-list-item'>MySQL</div>
                       <div className='grid-item-tool-list-item'>SCSS</div>
+                    </div>
+                  </div>
+
+                  <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://github.com/me50/wishwa-50/tree/web50/projects/2020/x/commerce'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon'>
+
+                      </div>
+                      <div 
+                      className='second-logo'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://github.com/me50/wishwa-50/tree/web50/projects/2020/x/commerce')
+                      }}
+                      >
+                        <div id='first-tab-logo'>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>E-commerce website</div>
+                    <div className='grid-item-body'>E-bay like e-commerce auction site that will allow users to post auction listings, place bids on listings, etc..</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Django</div>
+                      <div className='grid-item-tool-list-item'>Vanilla JS</div>
+                      <div className='grid-item-tool-list-item'>PostgreSQL</div>
+                    </div>
+                  </div> 
+
+                  <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://github.com/me50/wishwa-50/tree/web50/projects/2020/x/wiki'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon'>
+
+                      </div>
+                      <div 
+                      className='second-logo'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://github.com/me50/wishwa-50/tree/web50/projects/2020/x/wiki')
+                      }}
+                      >
+                        <div id='first-tab-logo'>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>Online encyclopedia</div>
+                    <div className='grid-item-body'>An online encyclopedia that consists of a number of encyclopedia entries on various topics.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Django</div>
+                      <div className='grid-item-tool-list-item'>Vanilla JS</div>
+                      <div className='grid-item-tool-list-item'>PostgreSQl</div>
                     </div>
                   </div>
 
@@ -738,43 +910,12 @@ A marketplace for sri lankan rural crafters to showcase their products.</div>
                       <div className='grid-item-tool-list-item'>Firebase</div>
                       <div className='grid-item-tool-list-item'>AWS</div>
                     </div>
-                  </div>
-
-                </div>
-
-                <div id="project-grid-switch" style={{ display: isVisible ? 'grid' : 'none' }}>
-                  
-                 <div 
-                  className="grid-item"
-                  style={{
-                    cursor:'pointer'
-                  }}
-                  onClick={ () => (window.open('https://github.com/Wishwa-code/BIS_D-D'))}
-                  >
-                    <div className='logo-bar'>
-                      <div className='first-icon'>
-
-                      </div>
-                      <div 
-                      className='second-logo'
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        window.open('https://github.com/Wishwa-code/BIS_D-D')
-                      }}
-                      >
-                        <div id='first-tab-logo'>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div className='grid-item-title' id='title-grid-1'>DistantClass.lk</div>
-                    <div className='grid-item-body'>A web application to display to display details of online tutors.</div>
-                    <div className='grid-item-tool-list'>
-                      <div className='grid-item-tool-list-item'>React-native</div>
-                      <div className='grid-item-tool-list-item'>Firebase</div>
-                      <div className='grid-item-tool-list-item'>AWS</div>
-                    </div>
                   </div> 
+
+                    
+
+                  
+                   
 
 
                  
@@ -798,7 +939,38 @@ A marketplace for sri lankan rural crafters to showcase their products.</div>
                 
                 <div className="project-grid">
                   
-                  
+                  <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://www.kaggle.com/code/wishwafr/bella-beat-case-study'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon-idea'>
+
+                      </div>
+                      
+
+                        <div
+                        className='second-logo'
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open('https://www.kaggle.com/code/wishwafr/bella-beat-case-study')
+                        }}
+                        >
+                         <div id='first-tab-down'>
+                          </div> 
+                        </div>
+                      
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>Bellebeat Case study</div>
+                    <div className='grid-item-body'>
+R notebook created by analyzing publicly available smart device user's data to identify trends  to optimize their marketing strategy.</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Google Data Analytics Professional Certificate</div>
+                    </div>
+                  </div> 
                   <div 
                   className="grid-item"
                   style={{
@@ -880,6 +1052,46 @@ Farm-to-market food delivery concept to reduce waste and stabilize prices using 
                     </div>
                   </div> 
                   
+                  
+
+                  
+                  
+                </div>
+
+                <div id="business-grid-switch" style={{ display: isBizvisible ? 'grid' : 'none' }}>
+                  
+                  <div 
+                  className="grid-item"
+                  style={{
+                    cursor:'pointer'
+                  }}
+                  onClick={ () => (window.open('https://drive.google.com/file/d/1ZsgkueOVUQs4Ouh57g664gNgQACWhH5O/view'))}
+                  >
+                    <div className='logo-bar'>
+                      <div className='first-icon'>
+
+                      </div>
+                      <div 
+                      className='second-logo'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://drive.google.com/file/d/1ZsgkueOVUQs4Ouh57g664gNgQACWhH5O/view')
+                      }}
+                      >
+                        <div id='first-tab-down'>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className='grid-item-title' id='title-grid-1'>MongoDB Research Poster</div>
+                    <div className='grid-item-body'>
+How is MongoDB used for Big Data and what are the associated data governance and data quality issues</div>
+                    <div className='grid-item-tool-list'>
+                      <div className='grid-item-tool-list-item'>Big Data Analytics</div>
+              
+                    </div>
+                  </div> 
+
                    <div 
                   className="grid-item"
                   style={{
@@ -925,44 +1137,6 @@ A SEO optimized microsite to promote a sri lankan celebrity and monitor web traf
                       <div className='grid-item-tool-list-item'>Digital marketing and web analytics</div>
                     </div>
                   </div> 
-
-                  
-                  
-                </div>
-
-                <div id="business-grid-switch" style={{ display: isBizvisible ? 'grid' : 'none' }}>
-                  
-                  <div 
-                  className="grid-item"
-                  style={{
-                    cursor:'pointer'
-                  }}
-                  onClick={ () => (window.open('https://drive.google.com/file/d/1ZsgkueOVUQs4Ouh57g664gNgQACWhH5O/view'))}
-                  >
-                    <div className='logo-bar'>
-                      <div className='first-icon'>
-
-                      </div>
-                      <div 
-                      className='second-logo'
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        window.open('https://drive.google.com/file/d/1ZsgkueOVUQs4Ouh57g664gNgQACWhH5O/view')
-                      }}
-                      >
-                        <div id='first-tab-down'>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div className='grid-item-title' id='title-grid-1'>MongoDB Research Poster</div>
-                    <div className='grid-item-body'>
-How is MongoDB used for Big Data and what are the associated data governance and data quality issues</div>
-                    <div className='grid-item-tool-list'>
-                      <div className='grid-item-tool-list-item'>Big Data Analytics</div>
-              
-                    </div>
-                  </div>  
 
                 </div> 
 

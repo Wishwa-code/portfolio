@@ -75,6 +75,7 @@
         flex-direction: column;
         align-items: center;
         width: 100vw;
+        height:80vh;
         
     }
     #section-3-header{
@@ -99,6 +100,7 @@
         padding: 0px;
         margin: 0px;
         width: 200px;
+        height: 70px;
     }
     #section-3-display{
         display: flex;
@@ -116,7 +118,7 @@
         background-color: #ffe400;
         transition: transform 0.3s;
         margin-left: 25px;
-        top:49px;
+        top:0px;
     }
     .edu-left-button{
         border-bottom:1px solid #8891b0;
