@@ -579,11 +579,11 @@ function App() {
                   <div className="feature-project-heading"> Featured Project</div>
                   <div className="featured-project-heading-2"> Panthiya</div>
                   <div className="featured-project-2-info">Online classroom app developed focusing on facilitating all the IT services for sri lankan private education institutes includeing video conferecing and message channels.</div>
-                  <div className="tools-list-2">
-                    <div className='tools-list-item-left'>VS code</div>
-                    <div className='tools-list-item-left'>Sublime Text</div>
-                    <div className='tools-list-item-left'>Atom</div>
-                    <div className='tools-list-item-left`'>hyper</div>
+                  <div className="tools-list">
+                    <div className='tools-list-item-left'>Django</div>
+                    <div className='tools-list-item-left'>React</div>
+                    <div className='tools-list-item-left'>Agora SDK</div>
+                    <div className='tools-list-item-left`'>WebRTC</div>
                   </div>
                   <div className="feature-project-button-list">
 
@@ -662,12 +662,12 @@ function App() {
                   </div>
 
                   <div 
-                  className="grid-item"
-                  style={{
-                    cursor:'pointer'
-                  }}
-                  onClick={ () => (window.open('https://github.com/Wishwa-code/panthiya'))}
-                  >
+                    className="grid-item"
+                    style={{
+                      cursor:'pointer'
+                    }}
+                    onClick={ () => (window.open('https://github.com/Wishwa-code/CS50-Project-Books'))}
+                    >
                     <div className='logo-bar'>
                       <div className='first-icon'>
 
@@ -676,23 +676,22 @@ function App() {
                       className='second-logo'
                       onClick={(e) => {
                         e.stopPropagation();
-                        window.open('https://github.com/Wishwa-code/panthiya')
-                      }}
-                      >
-                        <div id='first-tab-logo'>
+                        window.open('https://github.com/Wishwa-code/CS50-Project-Books')
+                        }}>
+                        <div id='second-tab-logo'>
 
                         </div>
                       </div>
                     </div>
-                    <div className='grid-item-title' id='title-grid-1'>Online classroom</div>
-                    <div className='grid-item-body'>Online web app developed focusing on facilitating all the IT services for sri lankan private education institutes includeing video conferecing and message channels.</div>
+                    <div className='grid-item-title' id='title-grid-1'>Book Review Website</div>
+                    <div className='grid-item-body'>A online library created with Bookreads API to get details of any book using ISBN number and review.</div>
                     <div className='grid-item-tool-list'>
-                      <div className='grid-item-tool-list-item'>Django</div>
-                      <div className='grid-item-tool-list-item'>React</div>
-                      <div className='grid-item-tool-list-item'>Agora SDK</div>
-                      <div className='grid-item-tool-list-item'>WebRTC</div>
+                      <div className='grid-item-tool-list-item'>Flask</div>
+                      <div className='grid-item-tool-list-item'>MySQL</div>
+                      <div className='grid-item-tool-list-item'>SCSS</div>
                     </div>
-                  </div>  
+                  </div>
+                  
 
 
                       <div 
@@ -768,36 +767,7 @@ function App() {
                   </div>
 
 
-                      <div 
-                    className="grid-item"
-                    style={{
-                      cursor:'pointer'
-                    }}
-                    onClick={ () => (window.open('https://github.com/Wishwa-code/CS50-Project-Books'))}
-                    >
-                    <div className='logo-bar'>
-                      <div className='first-icon'>
-
-                      </div>
-                      <div 
-                      className='second-logo'
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        window.open('https://github.com/Wishwa-code/CS50-Project-Books')
-                        }}>
-                        <div id='second-tab-logo'>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div className='grid-item-title' id='title-grid-1'>Book Review Website</div>
-                    <div className='grid-item-body'>A online library created with Bookreads API to get details of any book using ISBN number and review.</div>
-                    <div className='grid-item-tool-list'>
-                      <div className='grid-item-tool-list-item'>Flask</div>
-                      <div className='grid-item-tool-list-item'>MySQL</div>
-                      <div className='grid-item-tool-list-item'>SCSS</div>
-                    </div>
-                  </div>
+                      
 
                   <div 
                   className="grid-item"

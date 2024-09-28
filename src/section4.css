@@ -245,7 +245,7 @@
   background-repeat: no-repeat;
   background-position: center; 
   background-size:contain;
-  margin-top:-20px;
+  margin-top:10px;
 }
 #side-bar-buttons-github-p2:hover{
   transform: translateY(-4px);
