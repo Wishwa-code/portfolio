@@ -24,6 +24,9 @@
 .location-name-cert, .location-icon-cert{
     color:#ffe400;
 }
+#source-link{
+    text-decoration: underline;
+}
 .time-period-cert {
     margin-top: 10px;
     color:#8891b0;

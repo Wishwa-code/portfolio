@@ -15,8 +15,8 @@ export function UOW() {
                 <div className="location-icon-cert">
                     &nbsp;@&nbsp;
                 </div>
-                <a href="https://www.google.lk">
-                <div className="location-name-cert">
+                <a href="https://drive.google.com/file/d/1aCfnmfNI21SDoz7zK7doKylw-vwJxVNg/view?usp=sharing">
+                <div className="location-name-cert" id='source-link'>
                   UOW
                 </div>
                 </a>
@@ -29,7 +29,7 @@ export function UOW() {
                         BSc (Hons) Business Information Systems, Univeristy of Westminster, UK (Upper Second Class Honours). My dissertation was on developing a prediction system to identify the market potential of Sri Lankan export producs in different markets across the globe, using historical data. 
             </div>
 
-            <a href="https://www.google.lk">
+            <a href="https://drive.google.com/file/d/1aCfnmfNI21SDoz7zK7doKylw-vwJxVNg/view?usp=sharing">
                 <div className="cert-image-box">
                     <div className="cert-back-image"></div>
                     <div className="overlay-on-the-background"></div>
@@ -94,9 +94,9 @@ export function Google() {
                 <div className="location-icon-cert">
                     &nbsp;@&nbsp;
                 </div>
-                <a href="https://www.google.lk">
-                <div className="location-name-cert">
-                  Coursera
+                <a href="https://www.coursera.org/account/accomplishments/professional-cert/DVGKS8YBTGU4">
+                <div className="location-name-cert" id="source-link">
+                  <u>Coursera</u>
                 </div>
                 </a>
             </div>
@@ -108,7 +108,7 @@ export function Google() {
                         Learned the industry standard procedure to identify a business problem and finding insights to solve identified problem. Including complete process from creating effective questionnares to gather data, storing data safely, analysing data and visualizing the findings. Completed capstone project using bellabeat dataset to earn the final certificate.
             </div>
 
-            <a href="https://www.google.lk">
+            <a href="https://www.coursera.org/account/accomplishments/professional-cert/DVGKS8YBTGU4">
                 <div className="cert-image-box">
                     <div className="cert-back-image"></div>
                     <div className="overlay-on-the-background"></div>
@@ -159,7 +159,7 @@ export function WPP() {
                 <div className="location-icon-cert">
                     &nbsp;@&nbsp;
                 </div>
-                <a href="https://www.google.lk">
+                <a href="https://github.com/me50/wishwa-50" data-alt="fallback-link" >
                 <div className="location-name-cert">
                   Edx
                 </div>
@@ -173,7 +173,7 @@ export function WPP() {
                 This module is offered by university of harvard for computer science students and any outside student as OpenCourseWare. All the projects were marked by harvard professors. Completed 5 challenging projects using django framework while learning extensive features provided by DJANGO framework.
             </div>
 
-            <a href="https://www.google.lk">
+            <a href="https://github.com/me50/wishwa-50">
                 <div className="cert-image-box">
                     <div className="cert-back-image"></div>
                     <div className="overlay-on-the-background"></div>
@@ -228,7 +228,7 @@ export function EJP() {
                 <div className="location-icon-cert">
                     &nbsp;@&nbsp;
                 </div>
-                <a href="https://www.google.lk">
+                <a href="https://github.com/Wishwa-code/panthiya">
                 <div className="location-name-cert">
                   Evotech
                 </div>
@@ -242,7 +242,7 @@ export function EJP() {
                         This course is offered by evotech  sri lankan IT institute. Refreshed the fundamental knowledge while learnig java language.
             </div>
 
-            <a className='cert-image-box' href="https://www.google.lk">
+            <a className='cert-image-box' href="https://github.com/Wishwa-code/panthiya">
                 
                     <div className="cert-back-image"></div>
                     <div className="overlay-on-the-background"></div>
