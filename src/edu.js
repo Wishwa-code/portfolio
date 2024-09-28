@@ -23,9 +23,11 @@ export function BIS() {
                     <div className="location-icon">
                     &nbsp;@&nbsp;
                     </div>
-                    <div className="location-name">
-                    We Are Designers
-                    </div>
+                    <a href="https://wearedesigners.net/" target='_blank'>
+                        <div className="location-name" id="source-link">
+                        We Are Designers
+                        </div>
+                    </a>
                 </div>
             </div>
             <div className="time-period">June 2021 - June 2022</div>
@@ -92,9 +94,11 @@ export function GDA () {
                     <div className="location-icon">
                     &nbsp;@&nbsp;
                     </div>
-                    <div className="location-name">
-                    FPA
-                    </div>
+                    <a href="https://www.fpasrilanka.org/en" target="_blank" id="source-link">
+                        <div className="location-name">
+                        FPA
+                        </div>
+                    </a>
                 </div>
             </div>
             <div className="time-period">June 2022 - June 2023</div>
