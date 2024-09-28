@@ -182,10 +182,10 @@ a {
   #mobile-footer-logo-list{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 50%;
     align-items: center;
     justify-content: center;
-    gap:30px;
+    gap:20px;
     height: 40px;
     margin-bottom: 15px;
   }

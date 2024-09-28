@@ -67,7 +67,7 @@ function App() {
   }
 
   const sendEmail = () => {
-    const email = "Wishwajayanath@gmail.com";
+    const email = "wishwakankanamge129@gmail.com";
     const subject = "Your Subject";
     const body = "Hello,\n\nThis is the email body.";
     
@@ -314,7 +314,7 @@ function App() {
                 <li>
                   <button className="email-link-top" onClick={()=> {
                     toggleMenu();
-                    (window.open('https://drive.google.com/file/d/1JbRp0fxRKmOd04rKPwStGvvNB9S5tFpZ/view?usp=sharing'));
+                    (window.open('https://drive.google.com/file/d/1rgLZ1AexKfyCjc_kkLlCtVNP18k7FzVX/view?usp=sharing'));
                   }}>
                     <div className="inner-tab-no-resume"></div>
                     <div className="inner-tab-text-resume">Resume</div>
@@ -1151,16 +1151,22 @@ A SEO optimized microsite to promote a sri lankan celebrity and monitor web traf
 
             <div id="footer-inner">
               <div id="mobile-footer-logo-list">
+              <a href='https://github.com/Wishwa-code' target='_blank'>
                <div id='fot-git-logo' className='mob-footer-item'>
                     
                </div>
+              </a>
+            
+            <a href='https://www.instagram.com/_wishwa_/' target='_blank'>
               <div id='fot-insta-logo' className='mob-footer-item'>
                       
                </div>
+            </a>
+            <a href='https://www.linkedin.com/in/wishwa-subhasingha-2404051b5/' target='_blank'>
                <div id='fot-linkedin-logo' className='mob-footer-item'>
                       
                </div>
-
+            </a>
               </div>
               <a href="https://github.com/Wishwa-code/portfolio" target="_blank"><p> Designed & Built by Wishwa Kankanamge</p></a>
             </div>

@@ -114,7 +114,7 @@ export function GDA () {
                     <div className="items-body-edu-bullet">
                     </div>
                     <div className="items-body-edu-text">
-                        Managed the timely release of content content for all the media channels.
+                        Managed the timely release of content for all the media channels.
                     </div>
                 </div>
             </div>
