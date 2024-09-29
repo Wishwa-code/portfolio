@@ -30,7 +30,7 @@ export function BIS() {
                     </a>
                 </div>
             </div>
-            <div className="time-period">June 2021 - June 2022</div>
+            <div className="time-period">July 2022 - June 2023</div>
 
             <div className="body-of-edu">
                 <div className="items-body-edu">
@@ -101,7 +101,7 @@ export function GDA () {
                     </a>
                 </div>
             </div>
-            <div className="time-period">June 2022 - June 2023</div>
+            <div className="time-period">Aug 2023 - Dec 2023</div>
 
             <div className="body-of-edu">
                 <div className="items-body-edu">

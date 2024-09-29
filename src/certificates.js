@@ -22,7 +22,7 @@ export function UOW() {
                 </a>
             </div>
 
-            <div className="time-period-cert">June 2021 - June 2022</div>
+            <div className="time-period-cert">June 2020 - July 2024</div>
 
            
             <div className="items-body-cert-text">
@@ -100,8 +100,7 @@ export function Google() {
                 </div>
                 </a>
             </div>
-
-            <div className="time-period-cert">June 2021 - June 2022</div>
+            <div className="time-period-cert">June 2023 - Dec 2023</div>
 
            
             <div className="items-body-cert-text">
@@ -166,7 +165,7 @@ export function WPP() {
                 </a>
             </div>
 
-            <div className="time-period-cert">June 2021 - June 2022</div>
+            <div className="time-period-cert">May 2024 - Sep 2024</div>
 
            
             <div className="items-body-cert-text">
@@ -235,7 +234,7 @@ export function EJP() {
                 </a>
             </div>
 
-            <div className="time-period-cert">June 2021 - June 2022</div>
+            <div className="time-period-cert">Mar 2021 - June 2021</div>
 
            
             <div className="items-body-cert-text">
