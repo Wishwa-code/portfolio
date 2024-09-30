@@ -12,7 +12,7 @@ import {UOW, Google, WPP, EJP } from './certificates.js'
 import {BIS, GDA} from './edu.js'
 import { useState, useRef, useEffect } from 'react';
 import Spline from '@splinetool/react-spline';
-import myphoto from './images/me.jpeg';
+import myphoto from './images/me.jpg';
 import linkedin from './images/linkedin.png';
 import github from './images/github.png';
 import githubhover from './images/githubhover.png';
