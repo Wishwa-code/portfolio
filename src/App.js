@@ -234,7 +234,7 @@ function App() {
               onMouseEnter={() => setIsHoveredlinkedin(true)}
               onMouseLeave={() => setIsHoveredlinkedin(false)} 
           >
-            <a href="https://www.linkedin.com/in/wishwa-subhasingha-2404051b5/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/wishwa-kankanamge/" target="_blank" rel="noopener noreferrer">
                 <img id="side-bar-buttons-linkedin" src={isHoveredlinkedin ? linkedinhover : linkedin} alt="linked-in"/>
             </a>
           </div>
